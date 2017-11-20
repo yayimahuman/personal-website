@@ -1,0 +1,143 @@
+@font-face {
+font-family: typo-round;
+src: url("../css/fonts/Typo_Round_Regular_Demo.otf") format("opentype");
+}
+
+@font-face {
+font-family: typo-round;
+font-weight: bold;
+src: url("fonts/Typo_Round_Bold_Demo.otf") format("opentype");
+}
+body {
+    width: 100%;
+    height: 100%;
+    font-family: "Open Sans", Helvetica, sans-serif;
+    color: #000;
+    background-color: #fff;
+}
+html {
+    width: 100%;
+    height: 100%;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Open Sans", Helvetica, sans-serif;
+}
+a {
+    color: #000;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+a:hover {
+    color: #f4b400;
+}
+.logo{
+    font-family: "typo-round", Helvetica, sans-serif;
+    color: #444;
+}
+.yellow{
+    color:#f4b400;
+}
+.vertical-centre{
+    position: absolute;
+    width:100%;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    /*top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    transform: translate((-50%,-50%);*/
+}
+.intro {
+    width: 100%;
+    height: 100%;
+    padding:0;
+    text-align: center;
+    position:relative;
+    overflow: hidden;
+    background: url("../img/road.jpg") no-repeat center center;
+    background-color: #F0F0F0;
+    background-size:cover;
+}
+.intro #continue-btn{
+    position: absolute;
+    bottom:10px;
+    left:50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    color:#bbb;
+}
+.intro a#continue-btn:hover{
+    color:#444;
+}
+.intro .col-sm-12{
+    text-align: center;
+    margin:0;
+    padding:0;
+    width:100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.2);
+    display: table;
+}
+.intro .col-sm-12 h1 {
+    font-size: 13vw;
+    top:42%;
+    -webkit-user-select: none;  /* Chrome all / Safari all */
+    -moz-user-select: none;     /* Firefox all */
+    -ms-user-select: none;      /* IE 10+ */
+    user-select: none;
+    cursor: default;
+    display: table-cell;
+    vertical-align: middle;
+}
+.content-section {
+    padding: 50px;
+}
+.about-header{
+    font-size:5.8vw;
+}
+.about-header-2{
+    font-size:8vw;
+}
+.content-section h2{
+    font-size: 70px;
+}
+.content-section p{
+    font-size: 20px;
+}
+footer {
+    padding: 25px 0;
+    background-color: #333;
+    width:100%;
+}
+footer p, footer a {
+    margin:25px 0;
+    color: #bbb;
+    font-size: 14px;
+}
+footer a.pull-right{
+    color:#bbb;
+}
+footer a:hover,
+footer a:focus {
+    text-decoration: none;
+    color:#f4b400;
+}
+@media (min-width: 768px) {
+    .intro {
+        height: 100%;
+        padding: 0;
+    }
+    .content-section p{
+        font-size: 36px;
+    }
+}
