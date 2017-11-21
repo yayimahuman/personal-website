@@ -1,3 +1,6 @@
+<?php
+$info = json_decode(file_get_contents("teadaddy.json"),true);
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -32,15 +35,23 @@
 
     <section class="section-dash" id="tea">
 
-        <form action="" method="post" id="dashboard-form">
+        <form action="edittea.php" method="post" id="tea-form">
 
             <div class="radio-group">
                 <h3>Tea Type</h3>
 
-                <input type="radio" id="option-10" name="teaType" value="green">
+                <input type="radio" id="option-10" name="teaType" value="green"
+                <?php if (isset($info['teaType']) && $info['teaType'] == "green"){
+                    //if teatype is green, check off green as default
+                    echo 'checked="checked"';
+                }?>>
                 <label class="custom-radio" for="option-10">Green</label>
 
-                <input type="radio" id="option-11" name="teaType" value="black">
+                <input type="radio" id="option-11" name="teaType" value="black"
+                <?php if (isset($info['teaType']) && $info['teaType'] == "black"){
+                    //if teatype is green, check off green as default
+                    echo 'checked="checked"';
+                }?>>
                 <label class="custom-radio" for="option-11">Black</label>
 
              </div>
@@ -48,14 +59,23 @@
             <div id="order-entry-input">
                 <div class="col-sm-12">
                     <span class="input input--haruki">
-                        <input name="txnnum" class="input__field input__field--haruki" type="text" />
+                        <input name="time" class="input__field input__field--haruki" type="text"
+                        <?php if (isset($info['timeOfBrew']) && $info['timeOfBrew'] != ""){
+                            date_default_timezone_set("America/New_York");
+                            $timeOfBrew = date('h:i a', strtotime($info['timeOfBrew']. " UTC"));
+                            if (substr($timeOfBrew,0,1) == '0'){//remove leading zero
+                                $timeOfBrew = substr($timeOfBrew,1);
+                            }
+                            //set time
+                            echo 'value="' . $timeOfBrew . '"';
+                        }?>
+                        />
+
                         <label class="input__label input__label--haruki" for="input-1">
-                            <span class="input__label-content input__label-content--haruki">Time of Brew (24 hour time)</span>
+                            <span class="input__label-content input__label-content--haruki">Time of Brew</span>
                         </label>
                     </span>
                 </div>
-
-
 
             <div class="clearfix"></div>
 
