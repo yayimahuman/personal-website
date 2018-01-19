@@ -18,13 +18,14 @@ h6 {
     font-family: "Open Sans", Helvetica, sans-serif;
 }
 a {
-    color: #000;
+    color: #fff;
     -webkit-transition: all 0.2s ease;
     -moz-transition: all 0.2s ease;
     transition: all 0.2s ease;
 }
-a:hover {
-    color: #f4b400;
+a:hover, a:focus {
+    color: #ddd;
+    text-decoration: none;
 }
 .vertical-centre{
     position: absolute;
@@ -50,6 +51,15 @@ a:hover {
     background: -webkit-linear-gradient(to right, #103856, #586d92);
     background: linear-gradient(to right, #103856, #586d92);
     color:#fff;
+    text-align: center;
+    -webkit-user-select: none;  /* Chrome all / Safari all */
+    -moz-user-select: none;     /* Firefox all */
+    -ms-user-select: none;      /* IE 10+ */
+    user-select: none;
+    cursor: default;
+}
+.intro h1{
+    font-size: 8vw;
 }
 .intro a#continue-btn{
     position: absolute;
@@ -62,23 +72,15 @@ a:hover {
 .intro a#continue-btn:hover,.intro a#continue-btn:active,.intro a#continue-btn:focus {
     color:#ccc;
 }
-.intro .col-sm-12{
-    text-align: center;
-    margin:0;
-    padding:0;
-    width:100%;
-    height: 100%;
-    display: table;
+.intro img{
+    border: 1vw solid #fff;
+    padding:1vw;
 }
-.intro .col-sm-12 h1 {
-    font-size: 5em;
-    -webkit-user-select: none;  /* Chrome all / Safari all */
-    -moz-user-select: none;     /* Firefox all */
-    -ms-user-select: none;      /* IE 10+ */
-    user-select: none;
-    cursor: default;
-    display: table-cell;
-    vertical-align: middle;
+.intro #harry-links{
+    margin-top: 2vw;
+}
+.intro #harry-links p{
+    margin-top: 4px;
 }
 .content-section {
     padding: 50px;
@@ -99,7 +101,7 @@ footer a.pull-right{
 footer a:hover,
 footer a:focus {
     text-decoration: none;
-    color:#f4b400;
+    color:#777;
 }
 @media (min-width: 768px) {
     .content-section p{

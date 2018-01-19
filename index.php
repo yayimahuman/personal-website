@@ -32,13 +32,44 @@
 
     <!-- Intro Header -->
     <header class="intro">
-        <div class="col-sm-12">
-            <h1>Harry's in progress website</h1>
+        <div class="vertical-centre">
+
+            <div class="col-xs-6 col-xs-offset-3 col-sm-4 col-sm-offset-4">
+                <img id="harry" class="img-responsive img-circle" src="img/harry.jpg">
+            </div>
+
+            <div class="clearfix"></div>
+
+            <h1 id="harry-desc">Hi! I'm Harry.</h1>
+
+            <div class="clearfix"></div>
+
+            <div id="harry-links" class="col-sm-4 col-sm-offset-4">
+                <div class="col-xs-4">
+                    <a target="_blank" href="resume.pdf">
+                        <i class="fal fa-file-alt fa-3x"></i>
+                        <p>Résumé</p>
+                    </a>
+                </div>
+
+                <div class="col-xs-4">
+                    <a target="_blank" href="https://github.com/harry-d">
+                        <i class="fab fa-github fa-3x"></i>
+                        <p>GitHub</p>
+                    </a>
+                </div>
+
+                <div class="col-xs-4">
+                    <a target="_blank" href="https://www.linkedin.com/in/harry-dong-919802121/">
+                        <i class="fab fa-linkedin fa-3x"></i>
+                        <p>LinkedIn</p>
+                    </a>
+                </div>
+            </div>
+
         </div>
-        <!--<a id="continue-btn" href="#about" class="btn btn-circle page-scroll">
-            <i class="fa fa-angle-down fa-4x"></i>
-        </a>-->
-        <a id="continue-btn" href="#about" class="btn page-scroll">
+
+        <a style="display:none" id="continue-btn" href="#about" class="btn page-scroll">
             <i class="fal fa-angle-down fa-4x"></i>
         </a>
     </header>
