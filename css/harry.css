@@ -1,13 +1,3 @@
-@font-face {
-font-family: typo-round;
-src: url("../css/fonts/Typo_Round_Regular_Demo.otf") format("opentype");
-}
-
-@font-face {
-font-family: typo-round;
-font-weight: bold;
-src: url("fonts/Typo_Round_Bold_Demo.otf") format("opentype");
-}
 body {
     width: 100%;
     height: 100%;
@@ -36,13 +26,6 @@ a {
 a:hover {
     color: #f4b400;
 }
-.logo{
-    font-family: "typo-round", Helvetica, sans-serif;
-    color: #444;
-}
-.yellow{
-    color:#f4b400;
-}
 .vertical-centre{
     position: absolute;
     width:100%;
@@ -63,21 +46,21 @@ a:hover {
     text-align: center;
     position:relative;
     overflow: hidden;
-    background: url("../img/road.jpg") no-repeat center center;
-    background-color: #F0F0F0;
-    background-size:cover;
+    background: #334668;
+    background: -webkit-linear-gradient(to right, #103856, #586d92);
+    background: linear-gradient(to right, #103856, #586d92);
+    color:#fff;
 }
-.intro #continue-btn{
+.intro a#continue-btn{
     position: absolute;
-    bottom:10px;
-    left:50%;
-    -webkit-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
+    bottom:20px;
+    color:#fff;
+    outline: 0;
+    left: 50%;
     transform: translateX(-50%);
-    color:#bbb;
 }
-.intro a#continue-btn:hover{
-    color:#444;
+.intro a#continue-btn:hover,.intro a#continue-btn:active,.intro a#continue-btn:focus {
+    color:#ccc;
 }
 .intro .col-sm-12{
     text-align: center;
@@ -85,12 +68,10 @@ a:hover {
     padding:0;
     width:100%;
     height: 100%;
-    background-color: rgba(255, 255, 255, 0.2);
     display: table;
 }
 .intro .col-sm-12 h1 {
-    font-size: 13vw;
-    top:42%;
+    font-size: 5em;
     -webkit-user-select: none;  /* Chrome all / Safari all */
     -moz-user-select: none;     /* Firefox all */
     -ms-user-select: none;      /* IE 10+ */
@@ -101,18 +82,6 @@ a:hover {
 }
 .content-section {
     padding: 50px;
-}
-.about-header{
-    font-size:5.8vw;
-}
-.about-header-2{
-    font-size:8vw;
-}
-.content-section h2{
-    font-size: 70px;
-}
-.content-section p{
-    font-size: 20px;
 }
 footer {
     padding: 25px 0;
@@ -133,10 +102,6 @@ footer a:focus {
     color:#f4b400;
 }
 @media (min-width: 768px) {
-    .intro {
-        height: 100%;
-        padding: 0;
-    }
     .content-section p{
         font-size: 36px;
     }

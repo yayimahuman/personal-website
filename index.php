@@ -9,22 +9,21 @@
     <meta name="description" content="Harry's Website">
     <meta name="author" content="Harry Dong">
 
-    <title>Harry's website</title>
+    <title>Harry's Website</title>
 
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link href="css/animate.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 
-    <link href="css/auto.css" rel="stylesheet">
-    <link href="css/auto-nav.css" rel="stylesheet">
+    <link href="css/harry.css" rel="stylesheet">
 
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/easing.js"></script>
     <script src="js/wow.min.js"></script>
+    <script defer src="js/font-awesome-5/bundles/everything.js"></script>
 
-    <script src="js/auto.js"></script>
-    <script src="js/auto-nav.js"></script>
+    <script src="js/harry.js"></script>
 
 </head>
 
@@ -39,6 +38,9 @@
         <!--<a id="continue-btn" href="#about" class="btn btn-circle page-scroll">
             <i class="fa fa-angle-down fa-4x"></i>
         </a>-->
+        <a id="continue-btn" href="#about" class="btn page-scroll">
+            <i class="fal fa-angle-down fa-4x"></i>
+        </a>
     </header>
 
 
