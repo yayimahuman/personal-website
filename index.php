@@ -35,7 +35,7 @@
         <div class="vertical-centre">
 
             <div class="col-xs-6 col-xs-offset-3 col-sm-4 col-sm-offset-4">
-                <img id="harry" class="img-responsive img-circle" src="img/harry.jpg">
+                <img id="harry" class="img-responsive" src="img/harry.png">
             </div>
 
             <div class="clearfix"></div>
@@ -45,24 +45,31 @@
             <div class="clearfix"></div>
 
             <div id="harry-links" class="col-sm-4 col-sm-offset-4">
-                <div class="col-xs-4">
+                <div class="col-xs-3">
                     <a target="_blank" href="resume.pdf">
                         <i class="fal fa-file-alt fa-3x"></i>
                         <p>Résumé</p>
                     </a>
                 </div>
 
-                <div class="col-xs-4">
+                <div class="col-xs-3">
                     <a target="_blank" href="https://github.com/harry-d">
                         <i class="fab fa-github fa-3x"></i>
                         <p>GitHub</p>
                     </a>
                 </div>
 
-                <div class="col-xs-4">
+                <div class="col-xs-3">
                     <a target="_blank" href="https://www.linkedin.com/in/harry-dong-919802121/">
                         <i class="fab fa-linkedin fa-3x"></i>
                         <p>LinkedIn</p>
+                    </a>
+                </div>
+
+                <div class="col-xs-3">
+                    <a target="_blank" href="mailto:hhdong@uwaterloo.ca">
+                        <i class="fas fa-envelope fa-3x"></i>
+                        <p>Email</p>
                     </a>
                 </div>
             </div>

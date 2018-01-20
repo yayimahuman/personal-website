@@ -3,7 +3,9 @@ body {
     height: 100%;
     font-family: "Open Sans", Helvetica, sans-serif;
     color: #000;
-    background-color: #fff;
+    background: #103856;
+    background: -webkit-linear-gradient(to right, #103856, #586d92);
+    background: linear-gradient(to right, #103856, #586d92);
 }
 html {
     width: 100%;
@@ -47,7 +49,6 @@ a:hover, a:focus {
     text-align: center;
     position:relative;
     overflow: hidden;
-    background: #334668;
     background: -webkit-linear-gradient(to right, #103856, #586d92);
     background: linear-gradient(to right, #103856, #586d92);
     color:#fff;
@@ -73,8 +74,6 @@ a:hover, a:focus {
     color:#ccc;
 }
 .intro img{
-    border: 1vw solid #fff;
-    padding:1vw;
 }
 .intro #harry-links{
     margin-top: 2vw;

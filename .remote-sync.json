@@ -1,0 +1,19 @@
+{
+  "logger": {
+    "title": "Remote Sync"
+  },
+  "uploadOnSave": true,
+  "useAtomicWrites": false,
+  "deleteLocal": false,
+  "hostname": "ftp.harrydong.com",
+  "port": "21",
+  "target": "public_html",
+  "ignore": [
+    ".remote-sync.json",
+    ".git/**"
+  ],
+  "username": "harrydong.com",
+  "password": "f9-K^9Hq3",
+  "watch": [],
+  "transport": "scp"
+}
