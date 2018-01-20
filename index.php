@@ -27,7 +27,7 @@
 
 </head>
 
-<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+<body id="page-top" data-spy="scroll">
 
 
     <!-- Intro Header -->
@@ -40,7 +40,7 @@
 
             <div class="clearfix"></div>
 
-            <h1 id="harry-desc">Hi! I'm Harry.</h1>
+            <h1 id="harry-desc">Hi, I'm Harry.</h1>
 
             <div class="clearfix"></div>
 

@@ -7,7 +7,7 @@
   "deleteLocal": false,
   "hostname": "ftp.harrydong.com",
   "port": "21",
-  "target": "public_html",
+  "readyTimeout": "9999",
   "ignore": [
     ".remote-sync.json",
     ".git/**"
@@ -15,5 +15,6 @@
   "username": "harrydong.com",
   "password": "f9-K^9Hq3",
   "watch": [],
-  "transport": "scp"
+  "transport": "ftp",
+  "target": "/public_html/"
 }
