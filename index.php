@@ -13,21 +13,30 @@
 
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link href="css/animate.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link  href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 
     <link href="css/harry.css" rel="stylesheet">
 
     <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <!-- <script src="js/bootstrap.min.js"></script> -->
     <script src="js/easing.js"></script>
     <script src="js/wow.min.js"></script>
-    <script defer src="js/font-awesome-5/bundles/everything.js"></script>
+    <script defer src="js/font-awesome-5/bundles/everything.min.js"></script>
 
     <script src="js/harry.js"></script>
 
 </head>
 
 <body id="page-top" data-spy="scroll">
+
+    <!-- add wow
+    add flashing arrow with class
+    do changing gradient
+    smaller icon text
+    project boxes
+    short about
+    footer -->
+
 
 
     <!-- Intro Header -->
@@ -47,7 +56,7 @@
             <div id="harry-links" class="col-sm-4 col-sm-offset-4">
                 <div class="col-xs-3">
                     <a target="_blank" href="resume.pdf">
-                        <i class="fal fa-file-alt fa-3x"></i>
+                        <i class="fas fa-file-alt fa-3x"></i>
                         <p>Résumé</p>
                     </a>
                 </div>
