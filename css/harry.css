@@ -73,10 +73,12 @@ a:hover, a:focus {
 .intro a#continue-btn:hover,.intro a#continue-btn:active,.intro a#continue-btn:focus {
     color:#ccc;
 }
-.intro img{
+.intro img#harry, .intro #harry-desc{
+    visibility: hidden;
 }
 .intro #harry-links{
     margin-top: 2vw;
+    visibility: hidden;
 }
 .intro #harry-links p{
     margin-top: 4px;

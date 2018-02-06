@@ -11,6 +11,7 @@
 
     <title>Harry's Website</title>
 
+    <link rel="shortcut icon" href="img/harry.png" type="image/x-icon" />
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link href="css/animate.css" rel="stylesheet" type="text/css">
     <link  href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
