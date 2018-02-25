@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link href="css/animate.css" rel="stylesheet" type="text/css">
     <link  href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
 
     <link href="css/harry.css" rel="stylesheet">
 
@@ -22,7 +23,7 @@
     <!-- <script src="js/bootstrap.min.js"></script> -->
     <script src="js/easing.js"></script>
     <script src="js/wow.min.js"></script>
-    <script defer src="js/font-awesome-5/bundles/everything.min.js"></script>
+
 
     <script src="js/harry.js"></script>
 
@@ -45,7 +46,7 @@
         <div class="vertical-centre">
 
             <div class="col-xs-6 col-xs-offset-3 col-sm-4 col-sm-offset-4">
-                <img id="harry" class="img-responsive" src="img/harry.png">
+                <img id="harry" class="img-responsive" src="https://imgur.com/QVTcaT7.png">
             </div>
 
             <div class="clearfix"></div>
@@ -54,7 +55,7 @@
 
             <div class="clearfix"></div>
 
-            <div id="harry-links" class="col-sm-4 col-sm-offset-4">
+            <div id="harry-links" class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3">
                 <div class="col-xs-3">
                     <a target="_blank" href="resume.pdf">
                         <i class="fas fa-file-alt fa-3x"></i>

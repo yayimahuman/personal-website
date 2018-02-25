@@ -1,15 +1,16 @@
+html {
+    width: 100%;
+    height: 100%;
+}
 body {
     width: 100%;
     height: 100%;
+    /* min-height: 60vw; */
     font-family: "Open Sans", Helvetica, sans-serif;
     color: #000;
     background: #103856;
     background: -webkit-linear-gradient(to right, #103856, #586d92);
     background: linear-gradient(to right, #103856, #586d92);
-}
-html {
-    width: 100%;
-    height: 100%;
 }
 h1,
 h2,
@@ -33,18 +34,15 @@ a:hover, a:focus {
     position: absolute;
     width:100%;
     top: 50%;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-    /*top: 50%;
     left: 50%;
     -webkit-transform: translate(-50%,-50%);
     -ms-transform: translate(-50%,-50%);
-    transform: translate((-50%,-50%);*/
+    transform: translate(-50%,-50%);
 }
 .intro {
     width: 100%;
     height: 100%;
+    min-height: 80vw;
     padding:0;
     text-align: center;
     position:relative;
@@ -53,14 +51,14 @@ a:hover, a:focus {
     background: linear-gradient(to right, #103856, #586d92);
     color:#fff;
     text-align: center;
-    -webkit-user-select: none;  /* Chrome all / Safari all */
-    -moz-user-select: none;     /* Firefox all */
-    -ms-user-select: none;      /* IE 10+ */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
     user-select: none;
     cursor: default;
 }
 .intro h1{
-    font-size: 8vw;
+    font-size: 10vw;
 }
 .intro a#continue-btn{
     position: absolute;
@@ -79,6 +77,7 @@ a:hover, a:focus {
 .intro #harry-links{
     margin-top: 2vw;
     visibility: hidden;
+    font-size: 80%;
 }
 .intro #harry-links p{
     margin-top: 4px;
@@ -105,7 +104,35 @@ footer a:focus {
     color:#777;
 }
 @media (min-width: 768px) {
+    .intro{
+        min-height: 50vw;
+    }
+    .intro h1{
+        font-size: 8vw;
+    }
     .content-section p{
         font-size: 36px;
+    }
+    .intro #harry-links{
+        margin-top: 23px;
+        font-size: 100%;
+    }
+}
+@media (min-width: 998px) {
+    .intro h1{
+        font-size: 92px;
+    }
+    .intro .vertical-centre{
+        width:998px;
+    }
+    .intro #harry-links{
+        margin-top: 23px;
+        font-size: 100%;
+        text-align: center;
+    }
+}
+@media (min-width: 1200px) {
+    .intro{
+        min-height: 600px;
     }
 }
