@@ -31,12 +31,14 @@
 
 <body id="page-top" data-spy="scroll">
 
-    <!-- add wow
-    add flashing arrow with class
+    <!--
     do changing gradient
-    smaller icon text
-    project boxes
-    short about
+    make things move into navbar position on scroll
+
+    short about me
+    my interests
+    projects -> make these look really fucking good (cardview?)
+
     footer -->
 
 
@@ -88,7 +90,7 @@
         </div>
 
         <a style="display:none" id="continue-btn" href="#about" class="btn page-scroll">
-            <i class="fal fa-angle-down fa-4x"></i>
+            <i class="far fa-angle-down fa-2x"></i>
         </a>
     </header>
 
