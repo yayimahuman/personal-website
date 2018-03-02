@@ -124,6 +124,8 @@ footer a:focus {
     padding: 8px 6px;
 }
 .card {
+    display: flex;
+    flex-direction: column;
     height: 100%;
     background-clip: border-box;
     /* border: 1px solid rgba(0, 0, 0, .125); */
@@ -135,11 +137,9 @@ footer a:focus {
     -moz-box-shadow: 0px 2px 3px 1px rgba(0,0,0,0.3);
     box-shadow: 0px 2px 3px 1px rgba(0,0,0,0.3);
 }
-.card-shutter:hover, .card-flip:hover{
-    transform: matrix(1.005,0,0,1.005,0,-3);
-    -webkit-box-shadow: 0px 5px 10px -2px rgba(0,0,0,0.4);
-    -moz-box-shadow: 0px 5px 10px -2px rgba(0,0,0,0.4);
-    box-shadow: 0px 5px 10px -2px rgba(0,0,0,0.4);
+
+.card-img{
+    flex-grow: 1;
 }
 .card-txt{
     text-align: center;
@@ -163,6 +163,20 @@ footer a:focus {
     display: inline-block;
     margin: 0px 2px;
 }
+
+
+
+.card-shutter:hover, .card-flip:hover{
+    transform: matrix(1.005,0,0,1.005,0,-3);
+    -webkit-box-shadow: 0px 5px 10px -2px rgba(0,0,0,0.4);
+    -moz-box-shadow: 0px 5px 10px -2px rgba(0,0,0,0.4);
+    box-shadow: 0px 5px 10px -2px rgba(0,0,0,0.4);
+}
+.card-shutter .card-txt-title{
+    margin-top:auto;
+}
+
+
 .html, .css, .js, .php{
     color: whitesmoke;
 }

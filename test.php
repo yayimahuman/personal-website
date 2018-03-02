@@ -145,20 +145,21 @@
 
         </div>
 
+
         <div class="deck">
 
             <!-- wide card with shuttered description -->
             <div class="card-wrapper col-sm-4">
                 <div class="card card-wide card-shutter active">
+
+                    <!-- image should be positioned absolutely revealing title but translate off -->
                     <div class="card-img">
-
+                        <img class="img-responsive" src="img/harry.jpg"/>
                     </div>
+
                     <div class="card-txt">
-
+                        <p class="card-txt-desc">desc</p>
                         <h2 class="card-txt-title">Title</h2>
-
-                        <p class="card-txt-desc">desc</li>
-
                     </div>
 
                 </div>
@@ -167,15 +168,15 @@
             <!-- wide card with shuttered description -->
             <div class="card-wrapper col-sm-4">
                 <div class="card card-wide card-shutter active">
+
+                    <!-- image should be positioned absolutely revealing title but translate off -->
                     <div class="card-img">
-
+                        <img class="img-responsive" src="img/harry.jpg"/>
                     </div>
+
                     <div class="card-txt">
-
+                        <p class="card-txt-desc">desc</p>
                         <h2 class="card-txt-title">Title</h2>
-
-                        <p class="card-txt-desc">desc</li>
-
                     </div>
 
                 </div>
@@ -184,21 +185,22 @@
             <!-- wide card with shuttered description -->
             <div class="card-wrapper col-sm-4">
                 <div class="card card-wide card-shutter active">
+
+                    <!-- image should be positioned absolutely revealing title but translate off -->
                     <div class="card-img">
-
+                        <img class="img-responsive" src="img/harry.jpg"/>
                     </div>
+
                     <div class="card-txt">
-
+                        <p class="card-txt-desc">desc</p>
                         <h2 class="card-txt-title">Title</h2>
-
-                        <p class="card-txt-desc">desc</li>
-
                     </div>
 
                 </div>
             </div>
 
         </div>
+
 
         <div class="deck">
 
