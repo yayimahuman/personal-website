@@ -138,7 +138,7 @@ footer a:focus {
     box-shadow: 0px 2px 3px 1px rgba(0,0,0,0.3);
 }
 
-.card-img{
+.card-static .card-img {
     flex-grow: 1;
 }
 .card-txt{
