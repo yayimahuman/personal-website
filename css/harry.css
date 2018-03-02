@@ -83,6 +83,9 @@ a:hover, a:focus {
 .intro img#harry, .intro #harry-desc{
     visibility: hidden;
 }
+.intro #harry-desc{
+    margin: 0em;
+}
 .intro #harry-links{
     margin-top: 2vw;
     visibility: hidden;
@@ -118,9 +121,6 @@ footer a:focus {
     }
     .intro h1{
         font-size: 8vw;
-    }
-    .content-section p{
-        font-size: 36px;
     }
     .intro #harry-links{
         margin-top: 23px;

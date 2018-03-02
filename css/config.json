@@ -382,8 +382,9 @@
     "@hr-border": "@gray-lighter"
   },
   "css": [
+    "code.less",
     "grid.less"
   ],
   "js": [],
-  "customizerUrl": "https://getbootstrap.com/docs/3.3/customize/?id=99715a498acaac39b7faef4f9eb50ae9"
+  "customizerUrl": "https://getbootstrap.com/docs/3.3/customize/?id=d1f65c43e2f2f5db0b31f60a6c373777"
 }
