@@ -31,7 +31,9 @@
 
 <body id="page-top" data-spy="scroll">
 
-    <section id="intro" style="height:600px; background:rgba(0,0,0,0.05)"></section>    
+    <!-- <div id="darken"></div> -->
+
+    <section id="intro" style="height:600px; background:rgba(0,0,0,0.05)"></section>
     <!--
     do changing gradient
     make things move into navbar position on scroll

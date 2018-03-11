@@ -42,17 +42,29 @@ $( document ).ready(function() {
     var vh, vw, dw, cardLength;
     //objects go here
 
-    var calcWindowProperties = function(){
+    calcWindowProperties = function(){
         vh = $(window).height();
         vw = $(window).width();
         dw = $("#deck").width();
         console.log("Window properties {viewport height: " + vh + ", viewport width: " + vw + ", deck width: " + dw + "}")
     }
+    recalculate = function(){
+        calcWindowProperties();
+        cardLength = round(cards.terabyteTundra.wrapperSelector.width());
+        for (c in cards){
+            collapseCard(cards[c]);
+            //place card on page
+            cards[c].wrapperSelector.height(cards[c].wrapperSelector.width());
+            cards[c].selector.width(cardLength);
+            cards[c].selector.height(cardLength);
 
-    var initCard = function(c){
+        }
+
+    };
+
+    initCard = function(c){
         var deck = $("#deck");
-        var markup = '<div id="' + c.id + '-wrapper" class="card-wrapper col-md-4" style="transform:translateY(0px)"></div>';
-        console.log("creating wrapper within deck");
+        var markup = '<div id="' + c.id + '-wrapper" class="card-wrapper col-sm-6 col-md-4" style="transform:translateY(0px)"></div>';
         deck.append(markup);
         c.wrapperSelector = $("#" + c.id + "-wrapper");
 
@@ -61,7 +73,7 @@ $( document ).ready(function() {
         cardLength = round(c.wrapperSelector.width());//accounts for padding
         markup = "<div id='" + c.id + "' class='card card-expand'><div class='card-cover'><div class='container'><div class='vertical-centre'><div id='" + c.id + "-img-container' class='img-container'><img id='" + c.id + "-img' /></div><h2 id='" + c.id + "-title' class='card-txt-title'></h2></div></div></div><div id='" + c.id + "-txt' class='card-txt hide'><p id='" + c.id + "-desc' class='card-txt-desc'></p></div></div>";
 
-        console.log("creating card with length " + cardLength);
+        console.log("creating card");
         c.wrapperSelector.html(markup);
 
         //initialize card css
@@ -85,9 +97,8 @@ $( document ).ready(function() {
         c.descSelector.html(c.description);
 
         collapseCard(c);
-
-    }
-    var initializeProjects = function(){
+    };
+    initializeProjects = function(){
 
         projects.forEach(function(project){
             //place card on page
@@ -119,6 +130,7 @@ $( document ).ready(function() {
         c.left = offset.left;
         c.textSelector.width(c.width);
         c.minHeight = 350;
+        c.borderRadius = "10px";
 
         /*
         if mobile
@@ -131,7 +143,7 @@ $( document ).ready(function() {
             c.marginLeft = -c.left;
             c.height = vh;
             c.width = vw;
-            //c.corners = true;//change to sharp corners!
+            c.borderRadius = "0px";
         }
         /*
         if desktop
@@ -145,13 +157,7 @@ $( document ).ready(function() {
         */
         else{
             c.width = min(800, vw - 100);
-
-            console.log(c.descSelector.height());
-
             c.height = vh - 100;
-
-
-
 
             var lrMargin, tbMargin;
             lrMargin = vw - c.width;
@@ -161,16 +167,13 @@ $( document ).ready(function() {
             if (vh < c.minHeight){
                 c.height = vh;
                 c.marginTop = -c.top;
-                //set sharp corners
+                c.borderRadius = "0px";
             }
-
-            console.log(c.top);
 
             // if (vh - 100 < c.minHeight){
             //     c.height = vh - 50;//bottom flush with window edge
             //     //set sharp corners
             // }
-
         }
 
     };
@@ -181,42 +184,33 @@ $( document ).ready(function() {
 
         //zoom back to full size while expanding
 
-        c.wrapperSelector.css("z-index",500 );
-        cards.dataEarth.wrapperSelector.css("z-index",-1 );
-        c.selector.css("z-index",500 );
-        c.textSelector.css("z-index",500 );
-        // c.selector.addClass("card-expand");
+        c.wrapperSelector.css("z-index", 4);
+        $("#darken").css("z-index", 3);
 
         calcCardPosition(c);
 
         //set card position properties (margin-top, margin-left, width, height)
 
-        c.selector.css({"margin-top" : c.marginTop, "margin-left" : c.marginLeft, "height" : c.height, "width" : c.width}).delay(1000);
-        c.coverSelector.css("height", c.minHeight);
+        c.selector.css({"margin-top" : c.marginTop, "margin-left" : c.marginLeft, "height" : c.height, "width" : c.width, "border-radius": c.borderRadius}).delay(1000);
+        c.coverSelector.css({"height": c.minHeight, "border-radius": c.borderRadius + " " + c.borderRadius + " 0px 0px"});
         c.textSelector.removeClass("hide");
 
     };
     var collapseCard = function(c){
+        $("#darken").css("z-index", -5);
+
         c.textSelector.addClass("hide");
-        c.selector.css({"margin-top" : 0, "margin-left" : 0, "height" : c.selector.height(), "width" : c.selector.width()});
+        c.selector.css({"margin-top" : 0, "margin-left" : 0, "height" : c.selector.height(), "width" : c.selector.width(),"border-radius": "10px"});
         c.selector.width(cardLength);
         c.selector.height(cardLength);
-        c.coverSelector.css("height", cardLength);
+        c.coverSelector.css({"height":cardLength, "border-radius": "10px"});
         // c.selector.removeClass("card-expand");
         setTimeout(function(){
-            c.wrapperSelector.css("z-index",0 );
+            c.wrapperSelector.css("z-index", 0);
         },800);
 
     };
 
-    translateCards = function(){
-        var scrollTop = $(window).scrollTop();
-
-            console.log("setting CSS");
-            //cards.terabyteTundra.wrapperSelector.css("transform", "translateY("+(-scrollTop)+")");
-
-        //window.requestAnimationFrame(translateCards);
-    };
 
 
     //run when page loads
@@ -227,7 +221,7 @@ $( document ).ready(function() {
 
     // $(window).scroll(function(){
     //         console.log('scrolling');
-    //         window.requestAnimationFrame(translateCards);
+    //         window.requestAnimationFrame(function);
     // });
 
     //add a click listener
@@ -251,8 +245,9 @@ $( document ).ready(function() {
 
     //on resize
     $(window).on("resize", function(){
+        //close cards if any are open
         console.log("ugh why would you resize this just makes me need to code so much more shit");
-
+        recalculate();
 
     });
 
