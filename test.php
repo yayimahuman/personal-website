@@ -14,7 +14,7 @@
     <link rel="shortcut icon" href="img/harry.png" type="image/x-icon" />
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link href="css/animate.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Mukta+Malar:300" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400" rel="stylesheet">
     <!-- <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet"> -->
 
     <link href="css/harry-test.css" rel="stylesheet">
@@ -31,6 +31,7 @@
 
 <body id="page-top" data-spy="scroll">
 
+    <section id="intro" style="height:600px; background:rgba(0,0,0,0.05)"></section>    
     <!--
     do changing gradient
     make things move into navbar position on scroll
@@ -63,257 +64,31 @@
 
 
     <section id="projects" class="content-section">
+        <div id="deck">
 
 
-
-
-        <div class="deck">
-
-            <!-- wide card -->
-            <div class="card-wrapper col-sm-4">
-                <div class="card card-wide card-static">
-
-                    <div class="card-img">
-                        <img class="img-responsive" src="https://i1.wp.com/www.kenlyonsphotography.com.au/wp-content/uploads/2014/10/140409-London-England-195928-1024px.jpg?ssl=1"/>
-
+<!--
+            <div class="card-wrapper col-md-4">
+                <div class='card'>
+                    <div class='card-cover'>
+                        <div class='container'>
+                            <div class='vertical-centre'>
+                                <div class='img-container'>
+                                    <img src="img/tt-logo.png"/>
+                                </div>
+                                <h2 class='card-txt-title'>Title</h2>
+                            </div>
+                        </div>
                     </div>
-
-                    <div class="card-txt">
-                        <h2 class="card-txt-title">Project Title</h2>
+                    <div class='card-txt'>
+                        <p class='card-txt-desc'>Description</p>
                     </div>
-
-                    <div class="card-footer">
-                        <ul class="card-footer-wrapper">
-                            <li><code class="js">JS</code></li>
-                            <li><code class="php">&lt;?php&gt;</code></li>
-                            <li><code class="mysql">MySQL<span style="color:#ededed">*</span></code></li>
-                        </ul>
-                    </div>
-
                 </div>
-            </div>
+            </div> -->
 
-            <!-- wide card -->
-            <div class="card-wrapper col-sm-4">
-                <div class="card card-wide card-static">
-
-                    <div class="card-img">
-                        <img class="img-responsive" src="http://static.flickr.com/43/102997171_f9263d8797_o.jpg"/>
-
-                    </div>
-
-                    <div class="card-txt">
-                        <h2 class="card-txt-title">Project Title</h2>
-                    </div>
-
-                    <div class="card-footer">
-                        <ul class="card-footer-wrapper">
-                            <li><code class="html">&lt;<span style="color:#f75d50">html</span>&gt;</code></li>
-                            <li><code class="css">.CSS</code></li>
-                            <li><code class="js">JS</code></li>
-                        </ul>
-                    </div>
-
-                </div>
-            </div>
-
-            <!-- wide card -->
-            <div class="card-wrapper col-sm-4">
-                <div class="card card-wide card-static">
-
-                    <div class="card-img">
-                        <img class="img-responsive" src="https://ifsstech.files.wordpress.com/2008/10/169.jpg"/>
-
-                    </div>
-
-                    <div class="card-txt">
-                        <h2 class="card-txt-title">Project Title</h2>
-                    </div>
-
-                    <div class="card-footer">
-                        <ul class="card-footer-wrapper">
-                            <li><code class="html">&lt;<span style="color:#f75d50">html</span>&gt;</code></li>
-                            <li><code class="css">.CSS</code></li>
-                            <li><code class="js">JS</code></li>
-                            <li><code class="php">&lt;?php&gt;</code></li>
-                            <li><code class="mysql">MySQL<span style="color:#ededed">*</span></code></li>
-                        </ul>
-                    </div>
-
-                </div>
-            </div>
-
-        </div>
-
-
-        <div class="deck">
-
-            <!-- wide card with shuttered description -->
-            <div class="card-wrapper col-sm-4">
-                <div class="card card-wide card-shutter active">
-
-                    <!-- image should be positioned absolutely revealing title but translate off -->
-                    <div class="card-img">
-                        <img class="img-responsive" src="img/harry.jpg"/>
-                    </div>
-
-                    <div class="card-txt">
-                        <p class="card-txt-desc">desc</p>
-                        <h2 class="card-txt-title">Title</h2>
-                    </div>
-
-                </div>
-            </div>
-
-            <!-- wide card with shuttered description -->
-            <div class="card-wrapper col-sm-4">
-                <div class="card card-wide card-shutter active">
-
-                    <!-- image should be positioned absolutely revealing title but translate off -->
-                    <div class="card-img">
-                        <img class="img-responsive" src="img/harry.jpg"/>
-                    </div>
-
-                    <div class="card-txt">
-                        <p class="card-txt-desc">desc</p>
-                        <h2 class="card-txt-title">Title</h2>
-                    </div>
-
-                </div>
-            </div>
-
-            <!-- wide card with shuttered description -->
-            <div class="card-wrapper col-sm-4">
-                <div class="card card-wide card-shutter active">
-
-                    <!-- image should be positioned absolutely revealing title but translate off -->
-                    <div class="card-img">
-                        <img class="img-responsive" src="img/harry.jpg"/>
-                    </div>
-
-                    <div class="card-txt">
-                        <p class="card-txt-desc">desc</p>
-                        <h2 class="card-txt-title">Title</h2>
-                    </div>
-
-                </div>
-            </div>
-
-        </div>
-
-
-        <div class="deck">
-
-
-            <!-- wide card with description on backside -->
-            <div class="card-wrapper col-sm-4">
-                <div class="card card-wide card-flip">
-                    <div class="card-img">
-
-                    </div>
-                    <div class="card-txt">
-
-                        <h2 class="card-txt-title">Title</h2>
-
-                        <!-- <p class="card-txt-desc">desc</li> -->
-
-                    </div>
-
-                </div>
-            </div>
-
-            <!-- wide card with description on backside -->
-            <div class="card-wrapper col-sm-4">
-                <div class="card card-wide card-flip">
-                    <div class="card-img">
-
-                    </div>
-                    <div class="card-txt">
-
-                        <h2 class="card-txt-title">Title</h2>
-
-                        <!-- <p class="card-txt-desc">desc</li> -->
-
-                    </div>
-
-                </div>
-            </div>
-
-            <!-- wide card with description on backside -->
-            <div class="card-wrapper col-sm-4">
-                <div class="card card-wide card-flip">
-                    <div class="card-img">
-
-                    </div>
-                    <div class="card-txt">
-
-                        <h2 class="card-txt-title">Title</h2>
-
-                        <!-- <p class="card-txt-desc">desc</li> -->
-
-                    </div>
-
-                </div>
-            </div>
 
 
         </div>
-
-
-
-        <div class="clearfix"></div>
-
-
-
-        <div class="deck">
-            <!-- tall card with info already displayed -->
-            <div class="card card-tall card-static">
-                <div class="card-img">
-
-                </div>
-                <div class="card-txt">
-                    <h2 class="card-txt-title"></h2>
-
-                    <p class="card-txt-desc"></li>
-
-                </div>
-
-            </div>
-
-            <!-- tall card with shuttered description -->
-            <div class="card card-tall card-shutter">
-                <div class="card-img">
-
-                </div>
-                <div class="card-txt">
-                    <h2 class="card-txt-title"></h2>
-
-                    <p class="card-txt-desc"></li>
-
-                </div>
-
-            </div>
-
-            <!-- tall card with description on backside -->
-            <div class="card card-tall card-flip">
-                <div class="card-img">
-
-                </div>
-                <div class="card-txt">
-                    <h2 class="card-txt-title"></h2>
-
-                    <p class="card-txt-desc"></li>
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-
-
-
     </section>
 
 
