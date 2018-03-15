@@ -11,6 +11,8 @@ body {
     /* min-height: 60vw; */
     font-family: "Quicksand", sans-serif;
     color: #000;
+    background: #fff;
+    cursor: default;
     /* background: #103856; */
     /* background: -webkit-linear-gradient(to right, #103856, #586d92);
     background: linear-gradient(to right, #103856, #586d92); */
@@ -133,12 +135,15 @@ footer a:focus {
     height: 100%;
     width: 100%;
     background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+    display: none;
 }
 
 .card-wrapper{
     position: relative;
     height: 336px;
     padding: 18px;
+    transition: 0.5s ease;
 }
 .card {
     padding: 0px;
@@ -167,6 +172,16 @@ footer a:focus {
     color: #fff;
     transition: all 0.6s cubic-bezier(.6,1.84,.35,.83);
 }
+.card .card-cover h2{
+    font-size: 4em;
+}
+.card .card-cover .fa-times{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 2;
+    display: none;
+}
 .card .card-cover .container{
     position: relative;
     height: 100%;
@@ -193,6 +208,7 @@ footer a:focus {
 }
 .card .card-txt{
     position: relative;
+    z-index: 0;
     padding: 0.3em 0.5em;
     transition: all 0.6s cubic-bezier(.6,1.84,.35,.83);
 }
@@ -212,22 +228,6 @@ footer a:focus {
 } */
 
 
-.card-expand{
-    position: fixed;
-}
-.card-expand .card-cover{
-    position: relative;
-    /* z-index: 3; */
-    border-radius: 10px 10px 0px 0px;
-}
-.card-expand .card-cover h2{
-    font-size: 4em;
-}
-.card-expand .card-txt{
-    z-index: 0;
-}
-
-.
 
 
 
