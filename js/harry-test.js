@@ -142,24 +142,24 @@ $( document ).ready(function() {
         collapseCard(c);
     };
     //initialize projects in array
-    initProjects = function(){
+
+    initDeck = function(projects,id){
         //initialize all project and work cards
-        projects[0].forEach(function(project){
+        var deck = $("#" + id);
+        projects.forEach(function(project){
             console.log("initializing card: " + project.id);
-            initCard(project, $("#deck-projects"));
+            initCard(project, deck);
 
             console.log("pushing card: " + project.id + " into array");
             cards[project.id] = project;
         });
-        projects[1].forEach(function(project){
-            console.log("initializing card: " + project.id);
-            initCard(project, $("#deck-work"));
-
-            console.log("pushing card: " + project.id + " into array");
-            cards[project.id] = project;
-        });
-        console.log("initialization complete.");
+        console.log("initialized deck " + id);
     };
+    initProjects = function(){
+        initDeck(projects[0],"deck-projects");
+        initDeck(projects[1],"deck-work");
+        console.log("initialization complete.");
+    }
     //calculate style attributes required for exanding card
     calcCardPosition = function(c){//c is automatically passed as reference
 
@@ -256,7 +256,7 @@ $( document ).ready(function() {
             calcCardPosition(c);
 
             //set card position properties (margin-top, margin-left, width, height)
-            c.selector.css({"margin-top" : c.marginTop, "margin-left" : c.marginLeft, "height" : c.height, "width" : c.width, "border-radius": c.borderRadius});
+            c.selector.css({"margin-top" : c.marginTop, "margin-left" : c.marginLeft, "height" : c.height, "width" : c.width, "border-radius": c.borderRadius, "overflow": "scroll"});
             c.coverSelector.css({"height": c.minHeight, "border-radius": c.borderRadius + " " + c.borderRadius + " 0px 0px"});
 
             //set state as expanded when animation expires
@@ -282,7 +282,7 @@ $( document ).ready(function() {
 
             //reset element properties
             c.textSelector.addClass("hide");
-            c.selector.css({"margin-top" : 0, "margin-left" : 0, "height" : c.selector.height(), "width" : c.selector.width(),"border-radius": "10px"});
+            c.selector.css({"margin-top" : 0, "margin-left" : 0, "height" : c.selector.height(), "width" : c.selector.width(),"border-radius": "10px", "overflow": "hidden"});
             c.selector.width(cardLength);
             c.selector.height(cardLength);
             c.coverSelector.css({"height":cardLength, "border-radius": "10px"});

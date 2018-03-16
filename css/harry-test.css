@@ -148,7 +148,7 @@ footer a:focus {
 .card {
     padding: 0px;
     border-radius: 10px;
-    overflow: scroll;
+    overflow: hidden;
     background: #fff;
     -webkit-box-shadow: 0px 2px 6px 1px rgba(0,0,0,0.14);
     -moz-box-shadow: 0px 2px 6px 1px rgba(0,0,0,0.14);
@@ -219,13 +219,12 @@ footer a:focus {
 }
 .card .hide{
     transform: translateY(-100%);
-    overflow: hidden;
 }
 
 
-/* .card:hover{
+.card:hover{
     transform: scale(0.95);
-} */
+}
 
 
 
