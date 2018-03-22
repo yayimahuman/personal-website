@@ -34,6 +34,14 @@ var projects = [
             "img":"img/dataearth-logo.png",
             "bgColor":"#23A8E9",
             "titleColor":"#fff"
+        },
+        {
+            "id":"envisionCity",
+            "title":"Envision City",
+            "description":"Lorem ipsum dolor",
+            "img":"img/envisioncity-logo.png",
+            "bgColor":"#f1a852",
+            "titleColor":"#fff"
         }
     ],
     [
@@ -201,7 +209,7 @@ $( document ).ready(function() {
             c.width = min(800, vw - 100);
             c.height = vh - 100;
             c.textSelector.css({"width":c.width});
-            c.height = min(c.height, c.minHeight + c.textSelector.height());
+            c.height = min(c.height, c.minHeight + c.textSelector.height() + 20);
 
             var lrMargin, tbMargin;
             lrMargin = vw - c.width;
@@ -255,9 +263,25 @@ $( document ).ready(function() {
             //this actually does one edit: it removes the "hide" class from text
             calcCardPosition(c);
 
+            /*timing (each new line represents a delay):
+
+            instant:
+            *z-index
+
+            animated:
+            move, darken
+            grow, fadeIn, show text
+
+            */
+
             //set card position properties (margin-top, margin-left, width, height)
-            c.selector.css({"margin-top" : c.marginTop, "margin-left" : c.marginLeft, "height" : c.height, "width" : c.width, "border-radius": c.borderRadius, "overflow": "scroll"});
-            c.coverSelector.css({"height": c.minHeight, "border-radius": c.borderRadius + " " + c.borderRadius + " 0px 0px"});
+            c.selector.css({"margin-top" : c.marginTop, "margin-left" : c.marginLeft, "border-radius": c.borderRadius});
+            c.coverSelector.css({"border-radius": c.borderRadius + " " + c.borderRadius + " 0px 0px"});
+
+            setTimeout(function(){
+                c.selector.css({ "height" : c.height, "width" : c.width, "overflow": "scroll"});
+                c.coverSelector.css({"height": c.minHeight});
+            }, 200);
 
             //set state as expanded when animation expires
             setTimeout(function(){
@@ -291,6 +315,11 @@ $( document ).ready(function() {
                 $("#darken").css("z-index", -1);
                 c.wrapperSelector.css("z-index", 0);
                 enableScroll();
+
+                if (mouseOver !== null){
+                    grow(mouseOver);
+                }
+
                 c.state.setState("collapsed");
             }, animationTime);
         }
@@ -316,14 +345,53 @@ $( document ).ready(function() {
     console.log("initializing projects...");
     initProjects();
 
+    //ease these transitions
+    var resetSize = function(c){
+        c.selector.css({"transform":"scale(1)"});
+    }
+    var grow = function(c){
+        c.selector.css({"transform":"scale(1.05)"});
+    }
+    var shrink = function(c){
+        c.selector.css({"transform":"scale(0.95)"});
+    }
+    var mouseOver = null;
 
-    //add a click listener
+    //add listeners
+
+    //only have these 3 if not touchscreen
+    $(".card").hover(function(){
+        console.log(this.id + " card mouse enter.");
+        mouseOver = cards[this.id];
+        var card = cards[this.id];
+        //grow slightly
+        if (card.state.val() == "collapsed"){
+            grow(card);
+        }
+    }, function(){
+        console.log(this.id + " card mouse leave.");
+        mouseOver = null;
+        var card = cards[this.id];
+        //reset to normal size
+        resetSize(card);
+    });
+
+    $(".card").on("mousedown", function(){
+        console.log(this.id + " card mousedown.");
+        var card = cards[this.id];
+        //shrink slightly
+        if (card.state.val() == "collapsed"){
+            shrink(card);
+        }
+    });
+
+
     $(".card").on("click", function(){
         console.log(this.id + " card clicked.");
         var card = cards[this.id];
+        resetSize(card);
         expandCard(card);
     });
-
 
 
 

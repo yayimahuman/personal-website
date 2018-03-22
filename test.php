@@ -30,7 +30,6 @@
 </head>
 
 <body id="page-top" data-spy="scroll">
-
     <div id="darken"></div>
 
     <!--
@@ -48,8 +47,10 @@
     blog
 
     TODO:
-    add all projects
+    add all projects and descriptions
     play around with animation
+    enable hover only when card is collapsed
+    fix touch stuff (none of it works)
 
     TODO when you have more projects
     add languages
