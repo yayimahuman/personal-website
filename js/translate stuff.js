@@ -72,7 +72,7 @@ var projects = [
     ]
 ];
 var cards = [];
-var animationTime = 720;
+var animationTime = 700;
 var vh, vw, dw, cardLength, collapsed;
 State = function(){
     this.state = "";
@@ -205,8 +205,8 @@ $( document ).ready(function() {
         picture height: fixed at 350px (potentially lock ratio using css?)
         */
         if (vw < 768){
-            c.marginTop = -c.top;
-            c.marginLeft = -c.left;
+            c.translateY = -c.top;
+            c.translateX = -c.left;
             c.height = vh;
             c.width = vw;
             c.borderRadius = "0px";
@@ -230,11 +230,11 @@ $( document ).ready(function() {
             var lrMargin, tbMargin;
             lrMargin = vw - c.width;
             tbMargin = vh - c.height;
-            c.marginLeft = lrMargin/2 - c.left;
-            c.marginTop = tbMargin/2 - c.top;
+            c.translateX = lrMargin/2 - c.left;
+            c.translateY = tbMargin/2 - c.top;
             if (vh < c.minHeight){
                 c.height = vh;
-                c.marginTop = -c.top;
+                c.translateY = -c.top;
                 c.borderRadius = "0px";
             }
 
@@ -272,7 +272,7 @@ $( document ).ready(function() {
             c.state.setState("expanding");
 
             //scale on hover, zoom back to full size before/while expanding
-            c.wrapperSelector.css("z-index", 2);
+            c.wrapperSelector.css("z-index", 5);
             $("#darken").fadeIn().css("z-index", 1);
 
             //this actually does one edit: it removes the "hide" class from text
@@ -290,7 +290,9 @@ $( document ).ready(function() {
             */
 
             //set card position properties (margin-top, margin-left, width, height)
-            c.selector.css({"margin-top" : c.marginTop, "margin-left" : c.marginLeft, "height" : c.height, "width" : c.width, "border-radius": c.borderRadius, "overflow": "scroll"});
+            var translate = "translate(" + c.translateX + "px," + c.translateY + "px)";
+            console.log(translate);
+            c.selector.css({"transform" : translate, "height" : c.height, "width" : c.width, "border-radius": c.borderRadius, "overflow": "scroll"});
             c.coverSelector.css({"height": c.minHeight, "border-radius": c.borderRadius + " " + c.borderRadius + " 0px 0px"});
 
             setTimeout(function(){
@@ -320,7 +322,7 @@ $( document ).ready(function() {
 
             //reset element properties
             c.textSelector.addClass("hide");
-            c.selector.css({"margin-top" : 0, "margin-left" : 0, "height" : c.selector.height(), "width" : c.selector.width(),"border-radius": "10px", "overflow": "hidden"});
+            c.selector.css({"transform" : "translate(0px, 0px)", "height" : c.selector.height(), "width" : c.selector.width(),"border-radius": "10px", "overflow": "hidden"});
             c.selector.width(cardLength);
             c.selector.height(cardLength);
             c.coverSelector.css({"height":cardLength, "border-radius": "10px"});
@@ -330,9 +332,9 @@ $( document ).ready(function() {
                 c.wrapperSelector.css("z-index", 0);
                 enableScroll();
 
-                if (mouseOver !== null){
-                    grow(mouseOver);
-                }
+                // if (mouseOver !== null){
+                //     grow(mouseOver);
+                // }
 
                 c.state.setState("collapsed");
             }, animationTime);
@@ -380,14 +382,16 @@ $( document ).ready(function() {
         var card = cards[this.id];
         //grow slightly
         if (card.state.val() == "collapsed"){
-            grow(card);
+            //grow(card);
         }
     }, function(){
         console.log(this.id + " card mouse leave.");
         mouseOver = null;
         var card = cards[this.id];
         //reset to normal size
-        resetSize(card);
+        if (card.state.val() == "collapsed"){
+            //resetSize(card);
+        }
     });
 
     $(".card").on("mousedown", function(){
@@ -395,7 +399,7 @@ $( document ).ready(function() {
         var card = cards[this.id];
         //shrink slightly
         if (card.state.val() == "collapsed"){
-            shrink(card);
+            //shrink(card);
         }
     });
 
@@ -403,7 +407,7 @@ $( document ).ready(function() {
     $(".card").on("click", function(){
         console.log(this.id + " card clicked.");
         var card = cards[this.id];
-        resetSize(card);
+        //resetSize(card);
         expandCard(card);
     });
 

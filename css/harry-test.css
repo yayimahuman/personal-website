@@ -115,20 +115,28 @@ footer a:focus {
     margin-top: 4px;
 }
 .content-section {
-    padding: 50px;
+    padding: 0px;
+}
+@media (min-width:768px) {
+    .content-section {
+        padding: 50px;
+    }
 }
 
 
-#deck{
+.deck{
     position: static;
     width: 100%;
     padding: 0px;
 }
 @media (min-width:1200px) {
-    #deck{
+    .deck{
         margin: auto;
         width: 1100px;
     }
+}
+#deck-work .card{
+    /* box-shadow: 0px 2px 15px 3px rgba(0,0,0,0.29); */
 }
 #darken{
     position: fixed;
@@ -145,15 +153,17 @@ footer a:focus {
     padding: 18px;
 }
 .card {
+    position: absolute;
     padding: 0px;
     border-radius: 10px;
     overflow: hidden;
     background: #fff;
-    -webkit-box-shadow: 0px 2px 6px 1px rgba(0,0,0,0.14);
-    -moz-box-shadow: 0px 2px 6px 1px rgba(0,0,0,0.14);
     box-shadow: 0px 2px 6px 1px rgba(0,0,0,0.14);
-    transition: all 0.6s cubic-bezier(.6,1.84,.35,.83);
-    /* transition: transform 0.6s ease; */
+    transition: width 0.70s cubic-bezier(.51,1.7,.48,.84),
+        height 0.70s cubic-bezier(.51,1.7,.48,.84),
+        transform 0.70s cubic-bezier(.51,1.7,.48,.84),
+        margin 0.70s cubic-bezier(.51,1.7,.48,.84);
+    will-change: width, height, transform;
 }
 .card .card-cover{
     position: relative;
@@ -168,7 +178,7 @@ footer a:focus {
     background: #f8f8f8;
     background-clip: border-box;
     color: #fff;
-    transition: all 0.6s cubic-bezier(.6,1.84,.35,.83);
+    transition: all 0.5s ease;
 }
 .card .card-cover h2{
     font-size: 4em;
@@ -176,6 +186,7 @@ footer a:focus {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    transition: all 0.5s ease;
 }
 .card .card-cover .fa-times{
     position: absolute;
@@ -188,13 +199,13 @@ footer a:focus {
     position: relative;
     height: 100%;
     width: 100%;
-    transition: all 0.6s cubic-bezier(.6,1.84,.35,.83) 0s;
+    transition: all 0.5s ease;
 }
 .card .img-container{
     width: 70%;
     max-width: 300px;
     margin: auto;
-    transition: all 0.6s cubic-bezier(.6,1.84,.35,.83) 0s;
+    transition: all 0.5s ease;
 }
 .card .card-cover img{
     width: 100%;
@@ -203,6 +214,7 @@ footer a:focus {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    transition: all 0.5s ease;
 }
 .card .card-cover .card-txt-title{
     margin: 0px;
@@ -210,14 +222,14 @@ footer a:focus {
     margin-top: auto;
     font-size: 2.2em;
     text-align: center;
-    transition: all 0.3s ease;
     white-space: nowrap;
+    transition: all 0.5s ease;
 }
 .card .card-txt{
     position: relative;
     z-index: 0;
     padding: 0.3em 0.5em;
-    transition: all 0.6s cubic-bezier(.6,1.84,.35,.83);
+    transition: all 0.5s ease;
 }
 .card .card-txt-desc{
     text-align: center;

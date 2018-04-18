@@ -70,7 +70,7 @@
 
 
     <section id="projects" class="content-section">
-        <div id="deck-projects">
+        <div id="deck-projects" class="deck">
 
 
         </div>
@@ -78,7 +78,7 @@
     </section>
     <div class="clearfix"></div>
     <section id="work" class="content-section">
-        <div id="deck-work">
+        <div id="deck-work" class="deck">
 
 
         </div>
