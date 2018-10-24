@@ -1,0 +1,111 @@
+html, body, #root, .content {
+  height: 100%;
+  min-height: 700px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Muli", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #fff;
+  color: navy;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: navy;
+}
+
+a {
+  color: navy;
+  text-decoration: none;
+}
+a:hover, a:focus, a:active {
+  color: navy;
+  text-decoration: none;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+.content {
+  text-align: center;
+}
+
+section {
+  padding: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+#landing {
+  user-select: none;
+}
+#landing #window {
+  height: 250px;
+  width: 250px;
+  background-image: url("https://avatars1.githubusercontent.com/u/15241529?s=460&v=4");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  border-radius: 50%;
+  border: 10px solid #fff;
+}
+#landing #window-container {
+  height: 290px;
+  width: 290px;
+  border-radius: 50%;
+  transition: 0.3s ease all;
+}
+#landing #window-container:hover {
+  transform: scale(0.98);
+}
+#landing #window-inner-container {
+  height: 270px;
+  width: 270px;
+  border-radius: 50%;
+  border: 10px solid navy;
+}
+#landing h1 {
+  font-size: 5rem;
+  margin-bottom: 30px;
+}
+#landing .links {
+  position: absolute;
+  width: 100%;
+  left: 0px;
+  bottom: 0px;
+  transition: 0.3s ease all;
+  padding-bottom: 10px;
+}
+#landing .links a {
+  display: block;
+  width: 50px;
+}
+#landing .links p.link-desc {
+  font-size: 0.8rem;
+  visibility: hidden;
+  margin: 0px;
+}
+#landing .links .link:hover p.link-desc {
+  visibility: visible;
+}
+#landing .desc {
+  font-size: 1.1rem;
+}
+#landing .interest-icon-span {
+  font-size: 1.5rem;
+}
+#landing .interest-icon {
+  margin-right: 6px;
+}
+#landing .active-interest {
+  font-size: 3rem;
+  font-weight: 400;
+}
+
+/*# sourceMappingURL=App.css.map */

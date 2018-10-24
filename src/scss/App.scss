@@ -1,0 +1,119 @@
+@import "vars";
+
+html, body, #root, .content{
+    height: 100%;
+    min-height: 700px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Muli", "Helvetica Neue",
+    sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: $bg-primary;
+    color: $primary;
+}
+
+h1, h2, h3, h4, h5, h6{
+    color: $primary;
+}
+
+a{
+    color: $primary;
+    text-decoration: none;
+    &:hover, &:focus, &:active{
+        color: $primary;
+        text-decoration: none;
+    }
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.content {
+    text-align: center;
+}
+
+section{
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#landing{
+    user-select: none;
+    $window-length: 250px;
+    $border-width: 10px;
+    #window{
+        height: $window-length;
+        width: $window-length;
+        background-image: url("https://avatars1.githubusercontent.com/u/15241529?s=460&v=4");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        border-radius: 50%;
+        border: $border-width solid $bg-primary;
+    }
+    #window-container{
+        height: $window-length + 4 * $border-width;
+        width: $window-length + 4 * $border-width;
+        border-radius: 50%;
+        // border: $border-width solid $secondary;
+        transition: $transition;
+        &:hover{
+            transform: scale(0.98);
+        }
+    }
+    #window-inner-container{
+        height: $window-length + 2 * $border-width;
+        width: $window-length + 2 * $border-width;
+        border-radius: 50%;
+        border: $border-width solid $primary;
+    }
+    h1{
+        font-size: 5rem;
+        margin-bottom: 30px;
+    }
+
+    .links{
+        position: absolute;
+        width: 100%;
+        left: 0px;
+        bottom: 0px;
+        transition: $transition;
+        padding-bottom: 10px;
+
+        a{
+            display: block;
+            width: 50px;
+        }
+        p.link-desc{
+            font-size: 0.8rem;
+            visibility: hidden;
+            margin: 0px;
+        }
+        .link:hover p.link-desc{
+            visibility: visible;
+        }
+
+    }
+    .desc{
+        font-size: 1.1rem;
+    }
+    .interest-icon-span{
+        font-size: 1.5rem;
+    }
+    .interest-icon{
+        margin-right: 6px;
+    }
+    .active-interest{
+        font-size: 3rem;
+        font-weight: 400;
+    }
+}
