@@ -5,7 +5,8 @@ import { Tooltip } from 'reactstrap';
 import $ from "jquery";
 import moment from "moment";
 // import config from '../config';
-
+import Project from "../components/Project.jsx";
+import ProjectModal from "../components/ProjectModal.jsx";
 
 export default class Home extends Component {
     constructor(props){
@@ -80,12 +81,41 @@ export default class Home extends Component {
                     color: "white"
                 },
             },
-            activeInterest: "nothing to see here"
+            activeInterest: "nothing to see here",
+            projectsOrder: [
+                "Terabyte Tundra",
+                "How Long to Read",
+                "DataEarth"
+            ],
+            projects: {
+                "Terabyte Tundra": {
+                    color: "#fff",
+                    backgroundColor: "#334668",
+                    // logo: "",
+                    description: "Terabyte Tundra operates Reddit and Quora marketing websites.",
+                    link: "https://terabytetundra.com"
+                },
+                "How Long to Read": {
+                    color: "#fff",
+                    backgroundColor: "#334668",
+                    // logo: "",
+                    description: "Terabyte Tundra operates Reddit and Quora marketing websites."
+                },
+                "DataEarth": {
+                    color: "#fff",
+                    backgroundColor: "#334668",
+                    // logo: "",
+                    description: "Terabyte Tundra operates Reddit and Quora marketing websites."
+                },
 
-        }
+            },
+            activeProject: undefined
+        };
 
         this.hover = this.hover.bind(this);
         this.reset = this.reset.bind(this);
+        this.setActiveProject = this.setActiveProject.bind(this);
+        this.closeModal = this.closeModal.bind(this);
     }
 
     hover(event){
@@ -95,6 +125,12 @@ export default class Home extends Component {
     }
     reset(){
         this.setState({activeInterest: "nothing to see here"});
+    }
+    setActiveProject(name){
+        this.setState({activeProject: name});
+    }
+    closeModal(){
+        this.setState({activeProject: undefined});
     }
     // componentDidMount(){
     //     $('[data-toggle="tooltip"]').tooltip()
@@ -146,6 +182,15 @@ export default class Home extends Component {
 
                     </div>
                 </section>
+
+                <section id="projects">
+
+                    <div className="col">
+                        {this.state.projectsOrder.map(name => <Project {...this.state.projects[name]} key={name} name={name} onClick={this.setActiveProject} />)}
+                    </div>
+
+                </section>
+                <ProjectModal activeProject={this.state.activeProject} close={this.closeModal} {...this.state.projects[this.state.activeProject]} />
             </div>
         );
     }
