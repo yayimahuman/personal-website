@@ -123,19 +123,25 @@ section#projects {
 .project-card {
   border-radius: 5px;
   height: 100%;
-  position: relative;
   transition: 0.3s ease all;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .project-card:hover {
   transform: scale(0.98);
 }
 
+img.project-img {
+  width: 80%;
+}
+
 .project-title {
   font-size: 1.8rem;
   font-weight: 200;
-  position: absolute;
-  bottom: 0px;
-  width: 100%;
+  margin-bottom: 0px;
 }
 
 /*# sourceMappingURL=App.css.map */

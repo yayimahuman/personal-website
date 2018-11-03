@@ -24,7 +24,8 @@ export default class Project extends Component {
         return (
             <div className="project project-container">
                 <div style={{backgroundColor}} className="project-card" onClick={this.handleClick}>
-                    <p style={{color}} className="project-title">{name}</p>
+                    <img className="project-img img-responsive" src={this.props.logo} />
+                    {this.props.hideDesc ? "" : <p style={{color}} className="project-title">{name}</p>}
                 </div>
             </div>
         );

@@ -133,17 +133,21 @@ section#projects{
 .project-card{
     border-radius: 5px;
     height: 100%;
-    // background-color: $secondary;
-    position: relative;
     transition: $transition;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     &:hover{
         transform: scale(0.98);
     }
 }
+img.project-img{
+    width: 80%;
+}
 .project-title{
     font-size: 1.8rem;
     font-weight: 200;
-    position: absolute;
-    bottom: 0px;
-    width: 100%;
+    margin-bottom: 0px;
 }

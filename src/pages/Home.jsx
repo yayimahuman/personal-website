@@ -91,21 +91,24 @@ export default class Home extends Component {
                 "Terabyte Tundra": {
                     color: "#fff",
                     backgroundColor: "#334668",
-                    // logo: "",
+                    logo: "https://www.harrydong.com/img/tt-logo.png",
                     description: "Terabyte Tundra operates Reddit and Quora marketing websites.",
                     link: "https://terabytetundra.com"
                 },
                 "How Long to Read": {
-                    color: "#fff",
-                    backgroundColor: "#334668",
-                    // logo: "",
-                    description: "Terabyte Tundra operates Reddit and Quora marketing websites."
+                    color: "#000",
+                    backgroundColor: "#6aadcc",
+                    logo: "https://www.harrydong.com/img/hltr-logo.png",
+                    description: "Lorem ipsum dolor",
+                    link: "https://howlongtoreadthis.com"
                 },
                 "DataEarth": {
                     color: "#fff",
-                    backgroundColor: "#334668",
-                    // logo: "",
-                    description: "Terabyte Tundra operates Reddit and Quora marketing websites."
+                    backgroundColor: "#23a8e9",
+                    logo: "https://www.harrydong.com/img/dataearth-logo.png",
+                    description: "Lorem ipsum dolor",
+                    hideDesc: true,
+                    link: "https://dataearth.com"
                 },
 
             },
@@ -185,7 +188,7 @@ export default class Home extends Component {
 
                 <section id="projects">
 
-                    <div className="col">
+                    <div className="row justify-content-center">
                         {this.state.projectsOrder.map(name => <Project {...this.state.projects[name]} key={name} name={name} onClick={this.setActiveProject} />)}
                     </div>
 
