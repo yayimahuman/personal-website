@@ -227,6 +227,8 @@ img.project-img {
 
 .modal-content {
   border: none;
+  color: #444;
+  white-space: pre-wrap;
 }
 .modal-content .modal-bg {
   margin: -1rem -1rem 1rem;
@@ -242,6 +244,14 @@ img.project-img {
   top: 5px;
   right: 5px;
   cursor: pointer;
+}
+.modal-content p {
+  margin-bottom: 0;
+}
+.modal-content a {
+  width: 100%;
+  text-align: center;
+  color: #444;
 }
 
 @media (min-width: 768px) {

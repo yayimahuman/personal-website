@@ -35,11 +35,11 @@ export default class Home extends Component {
                 },
                 "tennis": {
                     icon: ['fal', 'tennis-ball'],
-                    color: "#D0E619"
+                    color: "#CFD736"
                 },
                 "food": {
                     icon: ['fal', 'utensils'],
-                    color: "#526B39"
+                    color: "#5C8A29"
                 },
                 "finance": {
                     icon: ['fal', 'usd-circle'],
@@ -92,21 +92,21 @@ export default class Home extends Component {
                     color: "#fff",
                     backgroundColor: "#334668",
                     logo: "https://www.harrydong.com/img/tt-logo.png",
-                    description: "Terabyte Tundra operates Reddit and Quora marketing websites.",
+                    description: "Reddit and Quora marketing and SEO for individuals and businesses. Completed numerous contracts working extensively with customers; work done includes reaching funding goal for a Kickstarter Campaign, and building backlinks for a popular e-commerce store.\n\nConstructed MySQL database to store orders and actions, as well as administrator and client dashboard to access stored data. Developed multiple websites with automated PayPal and Stripe payment processing with PHP backend.",
                     link: "https://terabytetundra.com"
                 },
                 "How Long to Read": {
                     color: "#000",
                     backgroundColor: "#6aadcc",
                     logo: "https://www.harrydong.com/img/hltr-logo.png",
-                    description: "Lorem ipsum dolor",
+                    description: "Featured in the New York Times, Lifehacker.com, Yahoo! News, Bustle, The Independent, The Pittsburgh Gazette, MakeUseOf, Netted by the Webbys, Qué Leer, The Memo, and several US and international radio stations. Over 1 million users since launch, 12 million searchable books, and 352,000 pages ranked in Google.\n\nHow Long to Read is a book search engine that shows you how long you'll take to read books you're interested in and provides personalized reading time data with a timed reading of a sample passage.\n\nIntegrated with Amazon API for book information and website monetization. Structured and implemented MySQL database for caching information, optimized for speed. Currently handles 1.2 million cached books for faster loading.",
                     link: "https://howlongtoreadthis.com"
                 },
                 "DataEarth": {
                     color: "#fff",
                     backgroundColor: "#23a8e9",
                     logo: "https://www.harrydong.com/img/dataearth-logo.png",
-                    description: "Lorem ipsum dolor",
+                    description: "DataEARTH transforms earth science research into a global ecological map. It helps visualize biological relationships between organic and non-organic things within an ecosystem.",
                     hideDesc: true,
                     link: "https://dataearth.com"
                 },

@@ -31,7 +31,7 @@ export default class ProjectModal extends React.Component {
                         </p>
                     </ModalBody>
                     <ModalFooter>
-                        <a href={link} target="_blank" style={{width: "100%", textAlign: "center"}}><FontAwesomeIcon icon={["fas", "browser"]} /> Website</a>
+                        <a href={link} target="_blank"><FontAwesomeIcon icon={["fas", "browser"]} /> Website</a>
                     </ModalFooter>
                 </Modal>
             </div>

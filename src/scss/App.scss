@@ -242,6 +242,8 @@ img.project-img{
 
 .modal-content{
     border: none;
+    color: $tertiary;
+    white-space: pre-wrap;
 
     .modal-bg{
         margin: -1rem -1rem 1rem;
@@ -257,6 +259,14 @@ img.project-img{
         top: 5px;
         right: 5px;
         cursor: pointer;
+    }
+    p{
+        margin-bottom: 0;
+    }
+    a{
+        width: 100%;
+        text-align: center;
+        color: $tertiary;
     }
 }
 
