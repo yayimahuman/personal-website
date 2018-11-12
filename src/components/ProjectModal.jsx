@@ -11,13 +11,9 @@ export default class ProjectModal extends React.Component {
         const isOpen = this.props.activeProject;
         const name = this.props.activeProject;
         const {color, backgroundColor, logo, description, link} = this.props;
-        console.log(logo);
 
         const modalBgStyles = {
-            margin: "-1rem -1rem 1rem",
-            height: "400px",
             backgroundColor: backgroundColor,
-            borderRadius: ".3rem .3rem 0 0"
         };
 
         return (
@@ -25,8 +21,8 @@ export default class ProjectModal extends React.Component {
                 <Modal isOpen={isOpen} toggle={this.props.close} className={"modal-dialog-centered"}>
                     {/*<ModalHeader toggle={this.props.close}>{name}</ModalHeader>*/}
                     <ModalBody>
-                        <div className="d-flex justify-content-center align-items-center" style={modalBgStyles}>
-                            <img className="mx-auto" src={logo} style={{width: "70%"}}/>
+                        <div className="d-flex justify-content-center align-items-center modal-bg" style={modalBgStyles}>
+                            <img className="modal-logo mx-auto" src={logo}/>
 
                             <FontAwesomeIcon className="close-btn" icon={["fa", "times"]} onClick={this.props.close} style={{color}} />
                         </div>

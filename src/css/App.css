@@ -11,6 +11,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background: #fff;
   color: navy;
+  min-width: 340px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -42,11 +43,6 @@ section {
   position: relative;
 }
 
-@media (min-width: 768px) {
-  section {
-    padding: 100px;
-  }
-}
 #landing {
   user-select: none;
   height: 100vh;
@@ -54,29 +50,32 @@ section {
   position: relative;
 }
 #landing #window {
-  height: 200px;
-  width: 200px;
+  height: 180px;
+  width: 180px;
   background-image: url("https://avatars1.githubusercontent.com/u/15241529?s=460&v=4");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
   border-radius: 50%;
-  border: 10px solid #fff;
+  border: 8px solid #fff;
+  box-sizing: content-box;
 }
 #landing #window-container {
-  height: 240px;
-  width: 240px;
+  height: 212px;
+  width: 212px;
   border-radius: 50%;
   transition: 0.3s ease all;
+  margin-bottom: 15px;
 }
 #landing #window-container:hover {
   transform: scale(0.99);
 }
 #landing #window-inner-container {
-  height: 220px;
-  width: 220px;
+  height: 196px;
+  width: 196px;
   border-radius: 50%;
-  border: 10px solid navy;
+  border: 8px solid navy;
+  box-sizing: content-box;
 }
 #landing h1 {
   font-size: 2rem;
@@ -150,7 +149,7 @@ section {
     padding-bottom: 10px;
   }
   #landing .links-container .links-dock {
-    background: #f8f8f8;
+    background: #f5f5f5;
     padding: 20px 30px 0px;
     border-radius: 1rem;
     animation-delay: 0.3s;
@@ -229,11 +228,33 @@ img.project-img {
 .modal-content {
   border: none;
 }
+.modal-content .modal-bg {
+  margin: -1rem -1rem 1rem;
+  height: 200px;
+  background-color: #fff;
+  border-radius: 0.3rem 0.3rem 0 0;
+}
+.modal-content .modal-logo {
+  width: 40%;
+}
 .modal-content .close-btn {
   position: absolute;
   top: 5px;
   right: 5px;
   cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  section {
+    padding: 100px;
+  }
+
+  .modal-content .modal-bg {
+    height: 400px;
+  }
+  .modal-content .modal-logo {
+    width: 70%;
+  }
 }
 
 /*# sourceMappingURL=App.css.map */

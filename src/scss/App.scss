@@ -14,6 +14,7 @@ body {
     -moz-osx-font-smoothing: grayscale;
     background: $bg-primary;
     color: $primary;
+    min-width: 340px;
 }
 
 h1, h2, h3, h4, h5, h6{
@@ -46,11 +47,6 @@ section{
     position: relative;
 }
 
-@media (min-width: $sm){
-    section{
-        padding: 100px;
-    }
-}
 
 #landing{
     user-select: none;
@@ -58,8 +54,8 @@ section{
     min-height: 600px;
     position: relative;
 
-    $window-length: 200px;
-    $border-width: 10px;
+    $window-length: 180px;
+    $border-width: 8px;
     #window{
         height: $window-length;
         width: $window-length;
@@ -69,13 +65,14 @@ section{
         background-position: center center;
         border-radius: 50%;
         border: $border-width solid $bg-primary;
+        box-sizing: content-box;
     }
     #window-container{
         height: $window-length + 4 * $border-width;
         width: $window-length + 4 * $border-width;
         border-radius: 50%;
-        // border: $border-width solid $secondary;
         transition: $transition;
+        margin-bottom: 15px;
         &:hover{
             transform: scale(0.99);
         }
@@ -85,6 +82,7 @@ section{
         width: $window-length + 2 * $border-width;
         border-radius: 50%;
         border: $border-width solid $primary;
+        box-sizing: content-box;
     }
     h1{
         font-size: 2rem;
@@ -165,7 +163,7 @@ section{
             padding-bottom: 10px;
 
             .links-dock{
-                background: #f8f8f8;
+                background: #f5f5f5;
                 padding: 20px 30px 0px;
                 border-radius: 1rem;
                 animation-delay: 0.3s;
@@ -245,10 +243,35 @@ img.project-img{
 .modal-content{
     border: none;
 
+    .modal-bg{
+        margin: -1rem -1rem 1rem;
+        height: 200px;
+        background-color: $bg-primary;
+        border-radius: .3rem .3rem 0 0;
+    }
+    .modal-logo{
+        width: 40%;
+    }
     .close-btn{
         position: absolute;
         top: 5px;
         right: 5px;
         cursor: pointer;
+    }
+}
+
+
+@media (min-width: $sm){
+    section{
+        padding: 100px;
+    }
+
+    .modal-content{
+        .modal-bg{
+            height: 400px;
+        }
+        .modal-logo{
+            width: 70%;
+        }
     }
 }

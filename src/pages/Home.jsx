@@ -39,7 +39,7 @@ export default class Home extends Component {
                 },
                 "food": {
                     icon: ['fal', 'utensils'],
-                    color: "#d0d7d8"
+                    color: "#526B39"
                 },
                 "finance": {
                     icon: ['fal', 'usd-circle'],
@@ -51,7 +51,7 @@ export default class Home extends Component {
                 },
                 "reading": {
                     icon: ['fal', 'book-open'],
-                    color: "#F4DF8E"
+                    color: "#3C3E3D"
                 },
                 "skiing": {
                     icon: ['fal', 'mountain'],
