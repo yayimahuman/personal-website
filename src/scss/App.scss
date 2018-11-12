@@ -39,16 +39,26 @@ code {
 }
 
 section{
-    padding: 100px;
+    padding: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
 }
 
+@media (min-width: $sm){
+    section{
+        padding: 100px;
+    }
+}
+
 #landing{
     user-select: none;
-    $window-length: 250px;
+    height: 100vh;
+    min-height: 600px;
+    position: relative;
+
+    $window-length: 200px;
     $border-width: 10px;
     #window{
         height: $window-length;
@@ -67,7 +77,7 @@ section{
         // border: $border-width solid $secondary;
         transition: $transition;
         &:hover{
-            transform: scale(0.98);
+            transform: scale(0.99);
         }
     }
     #window-inner-container{
@@ -77,15 +87,15 @@ section{
         border: $border-width solid $primary;
     }
     h1{
-        font-size: 5rem;
-        margin-bottom: 30px;
+        font-size: 2rem;
     }
 
-    .links{
+    .links-container{
         position: absolute;
         width: 100%;
         left: 0px;
         bottom: 0px;
+        margin: 0px;
         transition: $transition;
         padding-bottom: 10px;
 
@@ -94,27 +104,107 @@ section{
             width: 50px;
         }
         p.link-desc{
-            font-size: 0.8rem;
-            visibility: hidden;
+            font-size: 0.7rem;
             margin: 0px;
         }
-        .link:hover p.link-desc{
-            visibility: visible;
-        }
-
     }
     .desc{
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
     .interest-icon-span{
-        font-size: 1.5rem;
+        font-size: 1rem;
     }
     .interest-icon{
         margin-right: 6px;
     }
     .active-interest{
-        font-size: 3rem;
-        font-weight: 400;
+        display: none;
+    }
+    @media (min-width: $sm){
+
+        $window-length: 250px;
+        $border-width: 10px;
+        #window{
+            height: $window-length;
+            width: $window-length;
+            background-image: url("https://avatars1.githubusercontent.com/u/15241529?s=460&v=4");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+            border-radius: 50%;
+            border: $border-width solid $bg-primary;
+        }
+        #window-container{
+            height: $window-length + 4 * $border-width;
+            width: $window-length + 4 * $border-width;
+            border-radius: 50%;
+            // border: $border-width solid $secondary;
+            transition: $transition;
+            &:hover{
+                transform: scale(0.99);
+            }
+        }
+        #window-inner-container{
+            height: $window-length + 2 * $border-width;
+            width: $window-length + 2 * $border-width;
+            border-radius: 50%;
+            border: $border-width solid $primary;
+        }
+        h1{
+            font-size: 5rem;
+            margin-bottom: 30px;
+        }
+
+        .links-container{
+            position: fixed;
+            z-index: 100;
+            width: 100%;
+            left: 0px;
+            bottom: 0px;
+            transition: $transition;
+            padding-bottom: 10px;
+
+            .links-dock{
+                background: #f8f8f8;
+                padding: 20px 30px 0px;
+                border-radius: 1rem;
+                animation-delay: 0.3s;
+            }
+            a{
+                display: block;
+                width: 50px;
+            }
+            p.link-desc{
+                font-size: 0.8rem;
+                visibility: hidden;
+                margin: 0px;
+            }
+            .link{
+                transition: $transition;
+            }
+            .link:hover {
+                transition: $transition;
+                transform: translateY(-5px);
+                p.link-desc{
+                    visibility: visible;
+                }
+            }
+
+        }
+        .desc{
+            font-size: 1.1rem;
+        }
+        .interest-icon-span{
+            font-size: 1.5rem;
+        }
+        .interest-icon{
+            margin-right: 6px;
+        }
+        .active-interest{
+            display: block;
+            font-size: 3rem;
+            font-weight: 400;
+        }
     }
 }
 
@@ -150,4 +240,15 @@ img.project-img{
     font-size: 1.8rem;
     font-weight: 200;
     margin-bottom: 0px;
+}
+
+.modal-content{
+    border: none;
+
+    .close-btn{
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        cursor: pointer;
+    }
 }

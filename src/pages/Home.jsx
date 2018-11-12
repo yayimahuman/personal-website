@@ -152,7 +152,7 @@ export default class Home extends Component {
 
         return (
             <div className="content">
-                <section id="landing" className="h-100">
+                <section id="landing">
                     <div>
                         <div id="window-container" className="mx-auto"><div id="window-inner-container"><div id="window"></div></div></div>
 
@@ -164,23 +164,25 @@ export default class Home extends Component {
 
                         <p className={'active-interest' + (this.state.activeInterest == "nothing to see here" ? " invisible" : "")} style={{color: this.state.interests[this.state.activeInterest].color}}>{this.state.activeInterest}</p>
 
-                        <div className="links mx-auto row d-flex justify-content-center">
-                            <a className="link" href="https://www.harrydong.com/resume.pdf" target="_blank">
-                                <FontAwesomeIcon icon={["fal", "file-alt"]} size="2x" />
-                                <p className="link-desc">Résumé</p>
-                            </a>
-                            <a className="link" href="https://github.com/harry-d" target="_blank">
-                                <FontAwesomeIcon icon={["fab", "github"]} size="2x" />
-                                <p className="link-desc">GitHub</p>
-                            </a>
-                            <a className="link" href="https://www.linkedin.com/in/harry-dong/" target="_blank">
-                                <FontAwesomeIcon icon={["fab", "linkedin"]} size="2x" />
-                                <p className="link-desc">LinkedIn</p>
-                            </a>
-                            <a className="link" href="mailto:hhdong@uwaterloo.ca">
-                                <FontAwesomeIcon icon={["fal", "envelope"]} size="2x" />
-                                <p className="link-desc">Email</p>
-                            </a>
+                        <div className="links-container row d-flex justify-content-center">
+                            <div className="links-dock d-flex animated slideInUp">
+                                <a className="link" href="https://www.harrydong.com/resume.pdf" target="_blank">
+                                    <FontAwesomeIcon icon={["fal", "file-alt"]} size="2x" />
+                                    <p className="link-desc">Résumé</p>
+                                </a>
+                                <a className="link" href="https://github.com/harry-d" target="_blank">
+                                    <FontAwesomeIcon icon={["fab", "github"]} size="2x" />
+                                    <p className="link-desc">GitHub</p>
+                                </a>
+                                <a className="link" href="https://www.linkedin.com/in/harry-dong/" target="_blank">
+                                    <FontAwesomeIcon icon={["fab", "linkedin"]} size="2x" />
+                                    <p className="link-desc">LinkedIn</p>
+                                </a>
+                                <a className="link" href="mailto:hhdong@uwaterloo.ca">
+                                    <FontAwesomeIcon icon={["fal", "envelope"]} size="2x" />
+                                    <p className="link-desc">Email</p>
+                                </a>
+                            </div>
                         </div>
 
                     </div>

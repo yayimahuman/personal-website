@@ -35,19 +35,27 @@ code {
 }
 
 section {
-  padding: 100px;
+  padding: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
 }
 
+@media (min-width: 768px) {
+  section {
+    padding: 100px;
+  }
+}
 #landing {
   user-select: none;
+  height: 100vh;
+  min-height: 600px;
+  position: relative;
 }
 #landing #window {
-  height: 250px;
-  width: 250px;
+  height: 200px;
+  width: 200px;
   background-image: url("https://avatars1.githubusercontent.com/u/15241529?s=460&v=4");
   background-repeat: no-repeat;
   background-size: cover;
@@ -56,56 +64,130 @@ section {
   border: 10px solid #fff;
 }
 #landing #window-container {
-  height: 290px;
-  width: 290px;
+  height: 240px;
+  width: 240px;
   border-radius: 50%;
   transition: 0.3s ease all;
 }
 #landing #window-container:hover {
-  transform: scale(0.98);
+  transform: scale(0.99);
 }
 #landing #window-inner-container {
-  height: 270px;
-  width: 270px;
+  height: 220px;
+  width: 220px;
   border-radius: 50%;
   border: 10px solid navy;
 }
 #landing h1 {
-  font-size: 5rem;
-  margin-bottom: 30px;
+  font-size: 2rem;
 }
-#landing .links {
+#landing .links-container {
   position: absolute;
   width: 100%;
   left: 0px;
   bottom: 0px;
+  margin: 0px;
   transition: 0.3s ease all;
   padding-bottom: 10px;
 }
-#landing .links a {
+#landing .links-container a {
   display: block;
   width: 50px;
 }
-#landing .links p.link-desc {
-  font-size: 0.8rem;
-  visibility: hidden;
+#landing .links-container p.link-desc {
+  font-size: 0.7rem;
   margin: 0px;
 }
-#landing .links .link:hover p.link-desc {
-  visibility: visible;
-}
 #landing .desc {
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 #landing .interest-icon-span {
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 #landing .interest-icon {
   margin-right: 6px;
 }
 #landing .active-interest {
-  font-size: 3rem;
-  font-weight: 400;
+  display: none;
+}
+@media (min-width: 768px) {
+  #landing #window {
+    height: 250px;
+    width: 250px;
+    background-image: url("https://avatars1.githubusercontent.com/u/15241529?s=460&v=4");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    border-radius: 50%;
+    border: 10px solid #fff;
+  }
+  #landing #window-container {
+    height: 290px;
+    width: 290px;
+    border-radius: 50%;
+    transition: 0.3s ease all;
+  }
+  #landing #window-container:hover {
+    transform: scale(0.99);
+  }
+  #landing #window-inner-container {
+    height: 270px;
+    width: 270px;
+    border-radius: 50%;
+    border: 10px solid navy;
+  }
+  #landing h1 {
+    font-size: 5rem;
+    margin-bottom: 30px;
+  }
+  #landing .links-container {
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    left: 0px;
+    bottom: 0px;
+    transition: 0.3s ease all;
+    padding-bottom: 10px;
+  }
+  #landing .links-container .links-dock {
+    background: #f8f8f8;
+    padding: 20px 30px 0px;
+    border-radius: 1rem;
+    animation-delay: 0.3s;
+  }
+  #landing .links-container a {
+    display: block;
+    width: 50px;
+  }
+  #landing .links-container p.link-desc {
+    font-size: 0.8rem;
+    visibility: hidden;
+    margin: 0px;
+  }
+  #landing .links-container .link {
+    transition: 0.3s ease all;
+  }
+  #landing .links-container .link:hover {
+    transition: 0.3s ease all;
+    transform: translateY(-5px);
+  }
+  #landing .links-container .link:hover p.link-desc {
+    visibility: visible;
+  }
+  #landing .desc {
+    font-size: 1.1rem;
+  }
+  #landing .interest-icon-span {
+    font-size: 1.5rem;
+  }
+  #landing .interest-icon {
+    margin-right: 6px;
+  }
+  #landing .active-interest {
+    display: block;
+    font-size: 3rem;
+    font-weight: 400;
+  }
 }
 
 section#projects {
@@ -142,6 +224,16 @@ img.project-img {
   font-size: 1.8rem;
   font-weight: 200;
   margin-bottom: 0px;
+}
+
+.modal-content {
+  border: none;
+}
+.modal-content .close-btn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=App.css.map */
