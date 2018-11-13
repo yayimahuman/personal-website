@@ -1,14 +1,10 @@
 import React, { Component } from 'react';
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
+import { Modal, ModalBody, ModalFooter } from 'reactstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-export default class ProjectModal extends React.Component {
-    constructor(props) {
-        super(props);
-    }
+export default class ProjectModal extends Component {
 
     render() {
-        const isOpen = this.props.activeProject;
         const name = this.props.activeProject;
         const {color, backgroundColor, logo, description, link} = this.props;
 
@@ -18,11 +14,10 @@ export default class ProjectModal extends React.Component {
 
         return (
             <div>
-                <Modal isOpen={isOpen} toggle={this.props.close} className={"modal-dialog-centered"}>
-                    {/*<ModalHeader toggle={this.props.close}>{name}</ModalHeader>*/}
+                <Modal isOpen={name} toggle={this.props.close} className={"modal-dialog-centered"}>
                     <ModalBody>
                         <div className="d-flex justify-content-center align-items-center modal-bg" style={modalBgStyles}>
-                            <img className="modal-logo mx-auto" src={logo}/>
+                            <img className="modal-logo mx-auto" src={logo} alt={name + " logo"} />
 
                             <FontAwesomeIcon className="close-btn" icon={["far", "times"]} onClick={this.props.close} style={{color}} />
                         </div>
@@ -31,7 +26,7 @@ export default class ProjectModal extends React.Component {
                         </p>
                     </ModalBody>
                     <ModalFooter>
-                        <a href={link} target="_blank"><FontAwesomeIcon icon={["fas", "browser"]} /> Website</a>
+                        <a href={link} target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={["fas", "browser"]} /> Website</a>
                     </ModalFooter>
                 </Modal>
             </div>

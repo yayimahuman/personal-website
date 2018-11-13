@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 // import {Link} from "react-router-dom";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { Tooltip } from 'reactstrap';
-import $ from "jquery";
-import moment from "moment";
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 // import config from '../config';
 
 
@@ -19,12 +16,11 @@ export default class Project extends Component {
     }
 
     render(){
-        const {color, backgroundColor, img, name} = this.props;
-        console.log(this.props);
+        const {color, backgroundColor, img, name, logo} = this.props;
         return (
             <div className="project project-container">
                 <div style={{backgroundColor}} className="project-card" onClick={this.handleClick}>
-                    <img className="project-img img-responsive" src={this.props.logo} />
+                    <img className="project-img img-responsive" src={logo} alt={name + " logo"} />
                     {this.props.hideDesc ? "" : <p style={{color}} className="project-title">{name}</p>}
                 </div>
             </div>
