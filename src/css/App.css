@@ -1,0 +1,270 @@
+html, body, #root, .content {
+  height: 100%;
+  min-height: 700px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Muli", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #fff;
+  color: navy;
+  min-width: 340px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: navy;
+}
+
+a {
+  color: navy;
+  text-decoration: none;
+}
+a:hover, a:focus, a:active {
+  color: navy;
+  text-decoration: none;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+.content {
+  text-align: center;
+}
+
+section {
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+#landing {
+  user-select: none;
+  height: 100vh;
+  min-height: 600px;
+  position: relative;
+}
+#landing #window {
+  height: 180px;
+  width: 180px;
+  background-image: url("https://firebasestorage.googleapis.com/v0/b/harry-74f87.appspot.com/o/me.jpg?alt=media&token=5a913619-e806-4d8a-b14d-a943c002f084");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  border-radius: 50%;
+  border: 8px solid #fff;
+  box-sizing: content-box;
+}
+#landing #window-container {
+  height: 212px;
+  width: 212px;
+  border-radius: 50%;
+  transition: 0.3s ease all;
+  margin-bottom: 15px;
+}
+#landing #window-container:hover {
+  transform: scale(0.99);
+}
+#landing #window-inner-container {
+  height: 196px;
+  width: 196px;
+  border-radius: 50%;
+  border: 8px solid navy;
+  box-sizing: content-box;
+}
+#landing h1 {
+  font-size: 2rem;
+}
+#landing .links-container {
+  position: absolute;
+  width: 100%;
+  left: 0px;
+  bottom: 0px;
+  margin: 0px;
+  transition: 0.3s ease all;
+  padding-bottom: 10px;
+}
+#landing .links-container a {
+  display: block;
+  width: 50px;
+}
+#landing .links-container p.link-desc {
+  font-size: 0.7rem;
+  margin: 0px;
+}
+#landing .desc {
+  font-size: 1rem;
+}
+#landing .interest-icon-span {
+  font-size: 1rem;
+}
+#landing .interest-icon {
+  margin-right: 6px;
+}
+#landing .active-interest {
+  display: none;
+}
+@media (min-width: 768px) {
+  #landing #window {
+    height: 250px;
+    width: 250px;
+    background-image: url("https://firebasestorage.googleapis.com/v0/b/harry-74f87.appspot.com/o/me.jpg?alt=media&token=5a913619-e806-4d8a-b14d-a943c002f084");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    border-radius: 50%;
+    border: 10px solid #fff;
+  }
+  #landing #window-container {
+    height: 290px;
+    width: 290px;
+    border-radius: 50%;
+    transition: 0.3s ease all;
+  }
+  #landing #window-container:hover {
+    transform: scale(0.99);
+  }
+  #landing #window-inner-container {
+    height: 270px;
+    width: 270px;
+    border-radius: 50%;
+    border: 10px solid navy;
+  }
+  #landing h1 {
+    font-size: 5rem;
+    margin-bottom: 30px;
+  }
+  #landing .links-container {
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    left: 0px;
+    bottom: 0px;
+    transition: 0.3s ease all;
+    padding-bottom: 10px;
+  }
+  #landing .links-container .links-dock {
+    background: #f5f5f5;
+    padding: 20px 30px 0px;
+    border-radius: 1rem;
+    animation-delay: 0.3s;
+  }
+  #landing .links-container a {
+    display: block;
+    width: 50px;
+  }
+  #landing .links-container p.link-desc {
+    font-size: 0.8rem;
+    visibility: hidden;
+    margin: 0px;
+  }
+  #landing .links-container .link {
+    transition: 0.3s ease all;
+  }
+  #landing .links-container .link:hover {
+    transition: 0.3s ease all;
+    transform: translateY(-5px);
+  }
+  #landing .links-container .link:hover p.link-desc {
+    visibility: visible;
+  }
+  #landing .desc {
+    font-size: 1.1rem;
+  }
+  #landing .interest-icon-span {
+    font-size: 1.5rem;
+  }
+  #landing .interest-icon {
+    margin-right: 6px;
+  }
+  #landing .active-interest {
+    display: block;
+    font-size: 3rem;
+    font-weight: 400;
+  }
+}
+
+section#projects {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.project-container {
+  height: 300px;
+  width: 300px;
+  display: inline-block;
+  padding: 10px;
+}
+
+.project-card {
+  border-radius: 5px;
+  height: 100%;
+  transition: 0.3s ease all;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.project-card:hover {
+  transform: scale(0.98);
+}
+
+img.project-img {
+  width: 80%;
+}
+
+.project-title {
+  font-size: 1.8rem;
+  font-weight: 200;
+  margin-bottom: 0px;
+}
+
+.modal-content {
+  border: none;
+  color: #444;
+  white-space: pre-wrap;
+}
+.modal-content .modal-bg {
+  margin: -1rem -1rem 1rem;
+  height: 200px;
+  background-color: #fff;
+  border-radius: 0.3rem 0.3rem 0 0;
+}
+.modal-content .modal-logo {
+  width: 40%;
+}
+.modal-content .close-btn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  cursor: pointer;
+}
+.modal-content p {
+  margin-bottom: 0;
+}
+.modal-content a {
+  width: 100%;
+  text-align: center;
+  color: #444;
+}
+
+@media (min-width: 768px) {
+  section {
+    padding: 100px;
+  }
+
+  .modal-content .modal-bg {
+    height: 400px;
+  }
+  .modal-content .modal-logo {
+    width: 70%;
+  }
+}
+
+/*# sourceMappingURL=App.css.map */
