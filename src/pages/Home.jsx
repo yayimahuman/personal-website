@@ -98,14 +98,14 @@ export default class Home extends Component {
                 "How Long to Read": {
                     color: "#000",
                     backgroundColor: "#6aadcc",
-                    logo: "https://www.harrydong.com/img/hltr-logo.png",
+                    logo: "https://firebasestorage.googleapis.com/v0/b/harry-74f87.appspot.com/o/hltr-logo.png?alt=media&token=c983416d-999b-4514-9789-6a4d2086af12",
                     description: "Featured in the New York Times, Lifehacker.com, Yahoo! News, Bustle, The Independent, The Pittsburgh Gazette, MakeUseOf, Netted by the Webbys, Qué Leer, The Memo, and several US and international radio stations. Over 1 million users since launch, 12 million searchable books, and 352,000 pages ranked in Google.\n\nHow Long to Read is a book search engine that shows you how long you'll take to read books you're interested in and provides personalized reading time data with a timed reading of a sample passage.\n\nIntegrated with Amazon API for book information and website monetization. Structured and implemented MySQL database for caching information, optimized for speed. Currently handles 1.2 million cached books for faster loading.",
                     link: "https://howlongtoreadthis.com"
                 },
                 "DataEarth": {
                     color: "#fff",
                     backgroundColor: "#23a8e9",
-                    logo: "https://www.harrydong.com/img/dataearth-logo.png",
+                    logo: "https://firebasestorage.googleapis.com/v0/b/harry-74f87.appspot.com/o/de-logo.png?alt=media&token=670c637d-e2df-4a04-a531-d2e7d133cae9",
                     description: "DataEARTH transforms earth science research into a global ecological map. It helps visualize biological relationships between organic and non-organic things within an ecosystem.",
                     hideDesc: true,
                     link: "https://dataearth.com"
