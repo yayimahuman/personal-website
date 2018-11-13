@@ -91,7 +91,7 @@ export default class Home extends Component {
                 "Terabyte Tundra": {
                     color: "#fff",
                     backgroundColor: "#334668",
-                    logo: "https://www.harrydong.com/img/tt-logo.png",
+                    logo: "https://firebasestorage.googleapis.com/v0/b/harry-74f87.appspot.com/o/tt-logo.png?alt=media&token=27f24f0f-48a4-4c3a-b53c-bb87aa06fa1e",
                     description: "Reddit and Quora marketing and SEO for individuals and businesses. Completed numerous contracts working extensively with customers; work done includes reaching funding goal for a Kickstarter Campaign, and building backlinks for a popular e-commerce store.\n\nConstructed MySQL database to store orders and actions, as well as administrator and client dashboard to access stored data. Developed multiple websites with automated PayPal and Stripe payment processing with PHP backend.",
                     link: "https://terabytetundra.com"
                 },
@@ -105,7 +105,7 @@ export default class Home extends Component {
                 "DataEarth": {
                     color: "#fff",
                     backgroundColor: "#23a8e9",
-                    logo: "https://firebasestorage.googleapis.com/v0/b/harry-74f87.appspot.com/o/de-logo.png?alt=media&token=670c637d-e2df-4a04-a531-d2e7d133cae9",
+                    logo: "https://firebasestorage.googleapis.com/v0/b/harry-74f87.appspot.com/o/de-logo.png?alt=media&token=828b515c-814e-4e43-9ac5-990b8b20b7f7",
                     description: "DataEARTH transforms earth science research into a global ecological map. It helps visualize biological relationships between organic and non-organic things within an ecosystem.",
                     hideDesc: true,
                     link: "https://dataearth.com"
