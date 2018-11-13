@@ -104,7 +104,7 @@ export default class Home extends Component {
                 "DataEarth": {
                     color: "#fff",
                     backgroundColor: "#23a8e9",
-                    logo: "https://firebasestorage.googleapis.com/v0/b/harry-74f87.appspot.com/o/de-logo.png?alt=media&token=828b515c-814e-4e43-9ac5-990b8b20b7f7",
+                    logo: "https://firebasestorage.googleapis.com/v0/b/harry-74f87.appspot.com/o/de-logo.png?alt=media&token=43d4a8d6-43cb-4c22-999c-8ace3f23580c",
                     description: "DataEARTH transforms earth science research into a global ecological map. It helps visualize biological relationships between organic and non-organic things within an ecosystem.",
                     hideDesc: true,
                     link: "https://dataearth.com"
