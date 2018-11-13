@@ -91,7 +91,7 @@ export default class Home extends Component {
                 "Terabyte Tundra": {
                     color: "#fff",
                     backgroundColor: "#334668",
-                    logo: "https://firebasestorage.googleapis.com/v0/b/harry-74f87.appspot.com/o/tt-logo.png?alt=media&token=27f24f0f-48a4-4c3a-b53c-bb87aa06fa1e",
+                    logo: "https://firebasestorage.googleapis.com/v0/b/harry-74f87.appspot.com/o/tt-logo.svg?alt=media&token=736950ef-7b0a-4d26-9ce7-552a4ae15245",
                     description: "Reddit and Quora marketing and SEO for individuals and businesses. Completed numerous contracts working extensively with customers; work done includes reaching funding goal for a Kickstarter Campaign, and building backlinks for a popular e-commerce store.\n\nConstructed MySQL database to store orders and actions, as well as administrator and client dashboard to access stored data. Developed multiple websites with automated PayPal and Stripe payment processing with PHP backend.",
                     link: "https://terabytetundra.com"
                 },

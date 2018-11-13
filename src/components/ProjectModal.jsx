@@ -24,7 +24,7 @@ export default class ProjectModal extends React.Component {
                         <div className="d-flex justify-content-center align-items-center modal-bg" style={modalBgStyles}>
                             <img className="modal-logo mx-auto" src={logo}/>
 
-                            <FontAwesomeIcon className="close-btn" icon={["fa", "times"]} onClick={this.props.close} style={{color}} />
+                            <FontAwesomeIcon className="close-btn" icon={["far", "times"]} onClick={this.props.close} style={{color}} />
                         </div>
                         <p>
                             {description}
