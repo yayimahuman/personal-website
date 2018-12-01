@@ -165,7 +165,7 @@ export default class Home extends Component {
 
                         <div className="links-container row d-flex justify-content-center">
                             <div className="links-dock d-flex animated slideInUp">
-                                <a className="link" href="https://www.harrydong.com/resume.pdf" target="_blank" rel="noopener noreferrer">
+                                <a className="link" href="https://drive.google.com/file/d/1P2owV9XHSvL3n6x6PiAJh3WM-AsV0OFy/view?usp=sharing" target="_blank" rel="noopener noreferrer">
                                     <FontAwesomeIcon icon={["fal", "file-alt"]} size="2x" />
                                     <p className="link-desc">Résumé</p>
                                 </a>
