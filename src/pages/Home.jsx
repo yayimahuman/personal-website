@@ -5,7 +5,8 @@ import moment from "moment";
 
 import Project from "../components/Project.jsx";
 import ProjectModal from "../components/ProjectModal.jsx";
-// import config from '../config';
+
+import {RESUME_LINK, GITHUB_LINK, LINKEDIN_LINK, EMAIL_LINK} from '../config';
 
 export default class Home extends Component {
     constructor(props){
@@ -157,27 +158,27 @@ export default class Home extends Component {
 
                         <h1>Hi! I'm Harry</h1>
                         <p className="m-0 desc">{/*I'm a {this.state.age} year old guy from Toronto. */}I study software engineering at the University of Waterloo. <br />I love &nbsp;
-                        <span className="interest-icon-span">
-                            {icons}
-                        </span></p>
+                            <span className="interest-icon-span">
+                                {icons}
+                            </span></p>
 
                         <p className={'active-interest' + (this.state.activeInterest === "nothing to see here" ? " invisible" : "")} style={{color: this.state.interests[this.state.activeInterest].color}}>{this.state.activeInterest}</p>
 
                         <div className="links-container row d-flex justify-content-center">
                             <div className="links-dock d-flex animated slideInUp">
-                                <a className="link" href="https://drive.google.com/file/d/1P2owV9XHSvL3n6x6PiAJh3WM-AsV0OFy/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+                                <a className="link" href={RESUME_LINK} target="_blank" rel="noopener noreferrer">
                                     <FontAwesomeIcon icon={["fal", "file-alt"]} size="2x" />
                                     <p className="link-desc">Résumé</p>
                                 </a>
-                                <a className="link" href="https://github.com/harry-d" target="_blank" rel="noopener noreferrer">
+                                <a className="link" href={GITHUB_LINK} target="_blank" rel="noopener noreferrer">
                                     <FontAwesomeIcon icon={["fab", "github"]} size="2x" />
                                     <p className="link-desc">GitHub</p>
                                 </a>
-                                <a className="link" href="https://www.linkedin.com/in/harry-dong/" target="_blank" rel="noopener noreferrer">
+                                <a className="link" href={LINKEDIN_LINK} target="_blank" rel="noopener noreferrer">
                                     <FontAwesomeIcon icon={["fab", "linkedin"]} size="2x" />
                                     <p className="link-desc">LinkedIn</p>
                                 </a>
-                                <a className="link" href="mailto:hhdong@uwaterloo.ca" rel="noopener noreferrer">
+                                <a className="link" href={EMAIL_LINK} rel="noopener noreferrer">
                                     <FontAwesomeIcon icon={["fal", "envelope"]} size="2x" />
                                     <p className="link-desc">Email</p>
                                 </a>
