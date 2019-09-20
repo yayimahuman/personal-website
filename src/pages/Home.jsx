@@ -84,8 +84,8 @@ export default class Home extends Component {
             activeInterest: "nothing to see here",
             projectsOrder: [
                 "Jouncer",
-                "Terabyte Tundra",
                 "How Long to Read",
+                "Terabyte Tundra",
                 "DataEarth"
             ],
             projects: {
@@ -93,7 +93,7 @@ export default class Home extends Component {
                     color: "#fff",
                     backgroundColor: "#2a2c3f",
                     logo: "https://firebasestorage.googleapis.com/v0/b/harry-74f87.appspot.com/o/jouncer-logo.png?alt=media&token=7b962405-b56a-441b-ad95-0adb11eccf3f",
-                    description: "Jouncer brings together creators who are passionate about making cool things.",
+                    description: "I was the lead frontend developer and one of the members of the cofounding team of Jouncer. Our goal is to bring together creators so they could form teams and work on amazing projects. Jouncer is backed by YCombinator and was part of its summer 2019 batch.\n\nOur vision for Jouncer emerged from the desire help motivated, capable individuals to meet other similar people to work on amazing projects together. As the platform evolved, it became a place to share ideas and projects in addition to the teams feature.\n\nJouncer has a React frontend. The backend is Django with a Postgres database.",
                     link: "https://jouncer.com/",
                     hideDesc: true,
                 },
@@ -101,21 +101,21 @@ export default class Home extends Component {
                     color: "#fff",
                     backgroundColor: "#334668",
                     logo: "https://firebasestorage.googleapis.com/v0/b/harry-74f87.appspot.com/o/tt-logo.svg?alt=media&token=736950ef-7b0a-4d26-9ce7-552a4ae15245",
-                    description: "Reddit and Quora marketing and SEO for individuals and businesses. Completed numerous contracts working extensively with customers; work done includes reaching funding goal for a Kickstarter Campaign, and building backlinks for a popular e-commerce store.\n\nConstructed MySQL database to store orders and actions, as well as administrator and client dashboard to access stored data. Developed multiple websites with automated PayPal and Stripe payment processing with PHP backend.",
+                    description: "I created Terabyte Tundra, along with its primary sales website BoostUpvotes, with a high school friend of mine. We focus on products that help individuals and small businesses market on Reddit.\n\nTerabyte Tundra is written in PHP with a MySQL database. The sales websites supporting it use various technologies, such as native HTML + CSS + JS and WordPress. The sites have numerous integrations with PayPal and Stripe.",
                     link: "https://terabytetundra.com"
                 },
                 "How Long to Read": {
                     color: "#000",
                     backgroundColor: "#6aadcc",
                     logo: "https://firebasestorage.googleapis.com/v0/b/harry-74f87.appspot.com/o/hltr-logo.png?alt=media&token=c983416d-999b-4514-9789-6a4d2086af12",
-                    description: "Featured in the New York Times, Lifehacker.com, Yahoo! News, Bustle, The Independent, The Pittsburgh Gazette, MakeUseOf, Netted by the Webbys, Qué Leer, The Memo, and several US and international radio stations. Over 1 million users since launch, 12 million searchable books, and 352,000 pages ranked in Google.\n\nHow Long to Read is a book search engine that shows you how long you'll take to read books you're interested in and provides personalized reading time data with a timed reading of a sample passage.\n\nIntegrated with Amazon API for book information and website monetization. Structured and implemented MySQL database for caching information, optimized for speed. Currently handles 1.2 million cached books for faster loading.",
+                    description: "I developed How Long to Read, a site where you can search reading times for over twelve million books. We were featured in the New York Times, LifeHacker, The Independent, Yahoo News, and more. Over a million people from over a hundred countries have used our site since our launch in 2014.\n\nReading is clearly rewarding, but also very time-consuming. We envisioned How Long to Read as tool to help readers find out how long it would take them to read a book they wanted to or needed to read. By putting together pieces of information from different sources, such as word count and audiobook length, we can estimate a reading time for each book we display on our site. Users can read a passage from the book or an equivalent passage which we factor in to create a personalized reading time calculation. With this data, we hope to help readers around the world to allocate their time better.\n\nHow Long to Read is written in PHP with an HTML, CSS, and native JavaScript frontend. The site uses a MySQL database.",
                     link: "https://howlongtoreadthis.com"
                 },
                 "DataEarth": {
                     color: "#fff",
                     backgroundColor: "#23a8e9",
                     logo: "https://firebasestorage.googleapis.com/v0/b/harry-74f87.appspot.com/o/de-logo.png?alt=media&token=43d4a8d6-43cb-4c22-999c-8ace3f23580c",
-                    description: "DataEARTH transforms earth science research into a global ecological map. It helps visualize biological relationships between organic and non-organic things within an ecosystem.",
+                    description: "I was one of the two people who developed DataEarth under contract. DataEarth helps researchers visualize biological relationships within an ecosystem.",
                     hideDesc: true,
                     link: "https://dataearth.com/demo.php"
                 },
