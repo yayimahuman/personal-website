@@ -82,11 +82,20 @@ export default class Home extends Component {
             },
             activeInterest: "nothing to see here",
             projectsOrder: [
+                "Jouncer",
                 "Terabyte Tundra",
                 "How Long to Read",
                 "DataEarth"
             ],
             projects: {
+                "Jouncer": {
+                    color: "#fff",
+                    backgroundColor: "#2a2c3f",
+                    logo: "https://firebasestorage.googleapis.com/v0/b/harry-74f87.appspot.com/o/jouncer-logo.png?alt=media&token=7b962405-b56a-441b-ad95-0adb11eccf3f",
+                    description: "Jouncer brings together creators who are passionate about making cool things.",
+                    link: "https://jouncer.com/",
+                    hideDesc: true,
+                },
                 "Terabyte Tundra": {
                     color: "#fff",
                     backgroundColor: "#334668",
