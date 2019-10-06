@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 // import {Link} from "react-router-dom";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import moment from "moment";
+import ReactGA from 'react-ga';
 
 import Project from "../components/Project.jsx";
 import ProjectModal from "../components/ProjectModal.jsx";
@@ -132,21 +133,24 @@ export default class Home extends Component {
 
     hover(event){
         let interest = event.target.id || event.target.parentNode.id || "nothing to see here";
-        // event.target.tooltip({placement: "top"});
         this.setState({activeInterest: interest});
     }
     reset(){
         this.setState({activeInterest: "nothing to see here"});
     }
     setActiveProject(name){
+        ReactGA.event({
+            category: 'Navigation',
+            action: `Clicked on project ${name}`,
+        });
         this.setState({activeProject: name});
     }
     closeModal(){
         this.setState({activeProject: undefined});
     }
-    // componentDidMount(){
-    //     $('[data-toggle="tooltip"]').tooltip()
-    // }
+    componentDidMount(){
+        ReactGA.pageview(window.location.pathname + window.location.search);
+    }
 
     render(){
         let icons = this.state.interestsOrder.map(name => {

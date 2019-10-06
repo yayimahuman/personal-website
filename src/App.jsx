@@ -1,28 +1,31 @@
 import React, { Component } from 'react';
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
+import ReactGA from 'react-ga';
 
 // https://www.npmjs.com/package/@fortawesome/react-fontawesome
-import { library } from '@fortawesome/fontawesome-svg-core'
+import { library } from '@fortawesome/fontawesome-svg-core';
 import {
-    faCode,
-    faTennisBall,
-    faUtensils,
-    faUsdCircle,
-    faElephant,
+    faBicycle,
     faBookOpen,
-    faMountain,
+    faCode,
     faCoffee,
-    faPodium,
-    faMapMarked,
+    faElephant,
+    faEnvelope,
     faFemale,
     faFileAlt,
-    faEnvelope,
-    // faTimes,
-} from "@fortawesome/pro-light-svg-icons"
+    faMapMarked,
+    faMountain,
+    faPodium,
+    faTennisBall,
+    faUsdCircle,
+    faUtensils,
+} from "@fortawesome/pro-light-svg-icons";
 import {
     faTimes,
-} from "@fortawesome/pro-regular-svg-icons"
-// import { fas } from "@fortawesome/pro-solid-svg-icons"
+} from "@fortawesome/pro-regular-svg-icons";
+import {
+    faBrowser,
+} from "@fortawesome/pro-solid-svg-icons";
 import {
     faGithub,
     faLinkedin,
@@ -30,26 +33,28 @@ import {
 
 import Home from "./pages/Home.jsx";
 import './css/App.css';
-// import logo from './logo.svg';
-// import config from './config';
+
+ReactGA.initialize('G-5E883PXSWC', {debug:true});
 
 library.add(
-    faCode,
-    faTennisBall,
-    faUtensils,
-    faUsdCircle,
-    faElephant,
+    faBicycle,
     faBookOpen,
-    faMountain,
+    faBrowser,
+    faCode,
     faCoffee,
-    faPodium,
-    faMapMarked,
+    faElephant,
+    faEnvelope,
     faFemale,
     faFileAlt,
-    faEnvelope,
-    faTimes,
     faGithub,
     faLinkedin,
+    faMapMarked,
+    faMountain,
+    faPodium,
+    faTennisBall,
+    faTimes,
+    faUsdCircle,
+    faUtensils,
 );
 
 class App extends Component {
