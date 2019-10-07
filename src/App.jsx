@@ -35,9 +35,7 @@ import {
 import Home from "./pages/Home.jsx";
 import './css/App.css';
 
-ReactGA.initialize('UA-149491515-1', {
-    debug:true
-});
+ReactGA.initialize('UA-149491515-1');
 
 library.add(
     faBicycle,
