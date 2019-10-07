@@ -29,12 +29,15 @@ import {
 import {
     faGithub,
     faLinkedin,
-} from "@fortawesome/free-brands-svg-icons"
+    faMedium,
+} from "@fortawesome/free-brands-svg-icons";
 
 import Home from "./pages/Home.jsx";
 import './css/App.css';
 
-ReactGA.initialize('G-5E883PXSWC', {debug:true});
+ReactGA.initialize('UA-149491515-1', {
+    debug:true
+});
 
 library.add(
     faBicycle,
@@ -49,6 +52,7 @@ library.add(
     faGithub,
     faLinkedin,
     faMapMarked,
+    faMedium,
     faMountain,
     faPodium,
     faTennisBall,

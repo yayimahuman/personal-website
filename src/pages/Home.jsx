@@ -2,12 +2,12 @@ import React, { Component } from 'react';
 // import {Link} from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import moment from "moment";
-import ReactGA from 'react-ga';
+import ReactGA, {OutboundLink} from 'react-ga';
 
 import Project from "../components/Project.jsx";
 import ProjectModal from "../components/ProjectModal.jsx";
 
-import {RESUME_LINK, GITHUB_LINK, LINKEDIN_LINK, EMAIL_LINK} from '../config';
+import {RESUME_LINK, GITHUB_LINK, LINKEDIN_LINK, MEDIUM_LINK, EMAIL_LINK} from '../config';
 
 export default class Home extends Component {
     constructor(props){
@@ -122,7 +122,39 @@ export default class Home extends Component {
                 },
 
             },
-            activeProject: undefined
+            activeProject: undefined,
+            dock: [
+                {
+                    name: "Résumé",
+                    link: RESUME_LINK,
+                    analyticsLabel: "resume",
+                    icon: ["fal", "file-alt"],
+                },
+                {
+                    name: "GitHub",
+                    link: GITHUB_LINK,
+                    analyticsLabel: "github",
+                    icon: ["fab", "github"],
+                },
+                {
+                    name: "LinkedIn",
+                    link: LINKEDIN_LINK,
+                    analyticsLabel: "linkedin",
+                    icon: ["fab", "linkedin"],
+                },
+                {
+                    name: "Medium",
+                    link: MEDIUM_LINK,
+                    analyticsLabel: "medium",
+                    icon: ["fab", "medium"],
+                },
+                {
+                    name: "Email",
+                    link: EMAIL_LINK,
+                    analyticsLabel: "email",
+                    icon: ["fal", "envelope"],
+                },
+            ],
         };
 
         this.hover = this.hover.bind(this);
@@ -179,22 +211,12 @@ export default class Home extends Component {
 
                         <div className="links-container row d-flex justify-content-center">
                             <div className="links-dock d-flex animated slideInUp">
-                                <a className="link" href={RESUME_LINK} target="_blank" rel="noopener noreferrer">
-                                    <FontAwesomeIcon icon={["fal", "file-alt"]} size="2x" />
-                                    <p className="link-desc">Résumé</p>
-                                </a>
-                                <a className="link" href={GITHUB_LINK} target="_blank" rel="noopener noreferrer">
-                                    <FontAwesomeIcon icon={["fab", "github"]} size="2x" />
-                                    <p className="link-desc">GitHub</p>
-                                </a>
-                                <a className="link" href={LINKEDIN_LINK} target="_blank" rel="noopener noreferrer">
-                                    <FontAwesomeIcon icon={["fab", "linkedin"]} size="2x" />
-                                    <p className="link-desc">LinkedIn</p>
-                                </a>
-                                <a className="link" href={EMAIL_LINK} rel="noopener noreferrer">
-                                    <FontAwesomeIcon icon={["fal", "envelope"]} size="2x" />
-                                    <p className="link-desc">Email</p>
-                                </a>
+                                {this.state.dock.map(d => (
+                                    <OutboundLink className="link" eventLabel={d.analyticsLabel} to={d.link} target="_blank" rel="noopener noreferrer">
+                                        <FontAwesomeIcon icon={d.icon} size="2x" />
+                                        <p className="link-desc">{d.name}</p>
+                                    </OutboundLink>
+                                ))}
                             </div>
                         </div>
 
