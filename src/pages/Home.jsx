@@ -188,8 +188,8 @@ export default class Home extends Component {
         let icons = this.state.interestsOrder.map(name => {
             let i = this.state.interests[name];
             return (
-                <span>
-                    <FontAwesomeIcon id={name} className="interest-icon" icon={i.icon} key={name} onMouseEnter={this.hover} onMouseLeave={this.reset} />
+                <span key={name}>
+                    <FontAwesomeIcon id={name} className="interest-icon" icon={i.icon} onMouseEnter={this.hover} onMouseLeave={this.reset} />
                 </span>
 
             );
@@ -212,7 +212,7 @@ export default class Home extends Component {
                         <div className="links-container row d-flex justify-content-center">
                             <div className="links-dock d-flex animated slideInUp">
                                 {this.state.dock.map(d => (
-                                    <OutboundLink className="link" eventLabel={d.analyticsLabel} to={d.link} target="_blank" rel="noopener noreferrer">
+                                    <OutboundLink key={d.analyticsLabel} className="link" eventLabel={d.analyticsLabel} to={d.link} target="_blank" rel="noopener noreferrer">
                                         <FontAwesomeIcon icon={d.icon} size="2x" />
                                         <p className="link-desc">{d.name}</p>
                                     </OutboundLink>

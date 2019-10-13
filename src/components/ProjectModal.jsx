@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Modal, ModalBody, ModalFooter } from 'reactstrap';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {OutboundLink} from 'react-ga';
 
 export default class ProjectModal extends Component {
 
@@ -26,7 +27,12 @@ export default class ProjectModal extends Component {
                         </p>
                     </ModalBody>
                     <ModalFooter>
-                        <a href={link} target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={["fas", "browser"]} /> Website</a>
+                        {name
+                            ? (<OutboundLink className="link" eventLabel={`${name} outbound`} to={link} target="_blank">
+                                <FontAwesomeIcon icon={["fas", "browser"]} /> Website
+                            </OutboundLink>)
+                            : null
+                        }
                     </ModalFooter>
                 </Modal>
             </div>
