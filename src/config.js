@@ -1,4 +1,4 @@
-export const RESUME_LINK = "https://drive.google.com/open?id=1aMfAKctkvqEUyogytj_2Zo50iK50-1IO";
+export const RESUME_LINK = "https://drive.google.com/open?id=1pOM9BXAyXdLc8pMLp4VQlgQ0sqTsYizz";
 
 export const GITHUB_LINK = "https://github.com/yayimahuman";
 
