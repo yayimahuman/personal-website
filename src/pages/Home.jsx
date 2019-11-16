@@ -108,11 +108,12 @@ export default class Home extends Component {
                 "How Long to Read": {
                     backgroundColor: "#c34b30",
                     logo: "https://firebasestorage.googleapis.com/v0/b/harry-74f87.appspot.com/o/hltr-logo.svg?alt=media&token=042febef-5378-4f73-a511-a9930e408ddd",
-                    logoStyles: {width: "100px"},
+                    logoStyles: {width: "40%"},
                     textStyles: {
                         color: "#f5e2bf",
                         fontFamily: "Averta, Muli, sans-serif",
                         fontWeight: 600,
+                        fontSize: "1.6rem",
                     },
                     description: "I developed How Long to Read, a site where you can search reading times for over twelve million books. We were featured in the New York Times, LifeHacker, The Independent, Yahoo News, and more. Over a million people from over a hundred countries have used our site since our launch in 2014.\n\nReading is clearly rewarding, but also very time-consuming. We envisioned How Long to Read as tool to help readers find out how long it would take them to read a book they wanted to or needed to read. By putting together pieces of information from different sources, such as word count and audiobook length, we can estimate a reading time for each book we display on our site. Users can read a passage from the book or an equivalent passage which we factor in to create a personalized reading time calculation. With this data, we hope to help readers around the world to allocate their time better.\n\nHow Long to Read is written in Node JS with a React + Redux frontend. The site uses a MySQL database. It was originally written in PHP with an HTML, CSS, and native JavaScript frontend.",
                     link: "http://howlongtoread.com",

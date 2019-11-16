@@ -7,7 +7,8 @@ export default class ProjectModal extends Component {
 
     render() {
         const name = this.props.activeProject;
-        const {color, backgroundColor, logo, description, link} = this.props;
+        const {backgroundColor, logo, description, link, logoStyles, textStyles = {}} = this.props;
+        const {color} = textStyles;
 
         const modalBgStyles = {
             backgroundColor: backgroundColor,
@@ -17,8 +18,9 @@ export default class ProjectModal extends Component {
             <div>
                 <Modal isOpen={!!name} toggle={this.props.close} className={"modal-dialog-centered"}>
                     <ModalBody>
-                        <div className="d-flex justify-content-center align-items-center modal-bg" style={modalBgStyles}>
-                            <img className="modal-logo mx-auto" src={logo} alt={name + " logo"} />
+                        <div className="d-flex justify-content-center align-items-center modal-bg flex-column" style={modalBgStyles}>
+                            <img className="modal-logo mx-auto" src={logo} alt={name + " logo"} style={logoStyles} />
+                            {this.props.hideDesc ? "" : <p style={{...textStyles, fontSize: "2.5rem"}} className="project-title">{name}</p>}
 
                             <FontAwesomeIcon className="close-btn" icon={["far", "times"]} onClick={this.props.close} style={{color}} />
                         </div>
