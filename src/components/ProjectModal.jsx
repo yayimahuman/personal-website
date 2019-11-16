@@ -15,7 +15,7 @@ export default class ProjectModal extends Component {
 
         return (
             <div>
-                <Modal isOpen={name} toggle={this.props.close} className={"modal-dialog-centered"}>
+                <Modal isOpen={!!name} toggle={this.props.close} className={"modal-dialog-centered"}>
                     <ModalBody>
                         <div className="d-flex justify-content-center align-items-center modal-bg" style={modalBgStyles}>
                             <img className="modal-logo mx-auto" src={logo} alt={name + " logo"} />
