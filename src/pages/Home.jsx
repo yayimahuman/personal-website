@@ -91,34 +91,39 @@ export default class Home extends Component {
             ],
             projects: {
                 "Jouncer": {
-                    color: "#fff",
                     backgroundColor: "#2a2c3f",
                     logo: "https://firebasestorage.googleapis.com/v0/b/harry-74f87.appspot.com/o/jouncer-logo.png?alt=media&token=7b962405-b56a-441b-ad95-0adb11eccf3f",
                     description: "I was the lead frontend developer and one of the members of the cofounding team of Jouncer. Our goal is to bring together creators so they could form teams and work on amazing projects. Jouncer is backed by YCombinator and was part of its summer 2019 batch.\n\nOur vision for Jouncer emerged from the desire help motivated, capable individuals to meet other similar people to work on amazing projects together. As the platform evolved, it became a place to share ideas and projects in addition to the teams feature.\n\nJouncer has a React frontend. The backend is Django with a Postgres database.",
                     link: "https://jouncer.com/",
                     hideDesc: true,
+                    textStyles: {color: "#fff"},
                 },
                 "Terabyte Tundra": {
-                    color: "#fff",
                     backgroundColor: "#334668",
                     logo: "https://firebasestorage.googleapis.com/v0/b/harry-74f87.appspot.com/o/tt-logo.svg?alt=media&token=736950ef-7b0a-4d26-9ce7-552a4ae15245",
                     description: "I created Terabyte Tundra, along with its primary sales website BoostUpvotes, with a high school friend of mine. We focus on products that help individuals and small businesses market on Reddit.\n\nTerabyte Tundra is written in PHP with a MySQL database. The sales websites supporting it use various technologies, such as native HTML + CSS + JS and WordPress. The sites have numerous integrations with PayPal and Stripe.",
-                    link: "https://terabytetundra.com"
+                    link: "https://terabytetundra.com",
+                    textStyles: {color: "#fff"},
                 },
                 "How Long to Read": {
-                    color: "#000",
-                    backgroundColor: "#6aadcc",
-                    logo: "https://firebasestorage.googleapis.com/v0/b/harry-74f87.appspot.com/o/hltr-logo.png?alt=media&token=c983416d-999b-4514-9789-6a4d2086af12",
-                    description: "I developed How Long to Read, a site where you can search reading times for over twelve million books. We were featured in the New York Times, LifeHacker, The Independent, Yahoo News, and more. Over a million people from over a hundred countries have used our site since our launch in 2014.\n\nReading is clearly rewarding, but also very time-consuming. We envisioned How Long to Read as tool to help readers find out how long it would take them to read a book they wanted to or needed to read. By putting together pieces of information from different sources, such as word count and audiobook length, we can estimate a reading time for each book we display on our site. Users can read a passage from the book or an equivalent passage which we factor in to create a personalized reading time calculation. With this data, we hope to help readers around the world to allocate their time better.\n\nHow Long to Read is written in PHP with an HTML, CSS, and native JavaScript frontend. The site uses a MySQL database.",
-                    link: "https://howlongtoreadthis.com"
+                    backgroundColor: "#c34b30",
+                    logo: "https://firebasestorage.googleapis.com/v0/b/harry-74f87.appspot.com/o/hltr-logo.svg?alt=media&token=042febef-5378-4f73-a511-a9930e408ddd",
+                    logoStyles: {width: "100px"},
+                    textStyles: {
+                        color: "#f5e2bf",
+                        fontFamily: "Averta, Muli, sans-serif",
+                        fontWeight: 600,
+                    },
+                    description: "I developed How Long to Read, a site where you can search reading times for over twelve million books. We were featured in the New York Times, LifeHacker, The Independent, Yahoo News, and more. Over a million people from over a hundred countries have used our site since our launch in 2014.\n\nReading is clearly rewarding, but also very time-consuming. We envisioned How Long to Read as tool to help readers find out how long it would take them to read a book they wanted to or needed to read. By putting together pieces of information from different sources, such as word count and audiobook length, we can estimate a reading time for each book we display on our site. Users can read a passage from the book or an equivalent passage which we factor in to create a personalized reading time calculation. With this data, we hope to help readers around the world to allocate their time better.\n\nHow Long to Read is written in Node JS with a React + Redux frontend. The site uses a MySQL database. It was originally written in PHP with an HTML, CSS, and native JavaScript frontend.",
+                    link: "http://howlongtoread.com",
                 },
                 "DataEarth": {
-                    color: "#fff",
                     backgroundColor: "#23a8e9",
                     logo: "https://firebasestorage.googleapis.com/v0/b/harry-74f87.appspot.com/o/de-logo.png?alt=media&token=43d4a8d6-43cb-4c22-999c-8ace3f23580c",
                     description: "I was one of the two people who developed DataEarth under contract. DataEarth helps researchers visualize biological relationships within an ecosystem.",
                     hideDesc: true,
-                    link: "https://dataearth.com/demo.php"
+                    link: "https://dataearth.com/demo.php",
+                    textStyles: {color: "#fff"},
                 },
 
             },

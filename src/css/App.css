@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "Averta";
+  font-weight: 600;
+  src: url("https://firebasestorage.googleapis.com/v0/b/harry-74f87.appspot.com/o/Averta-Semibold.woff?alt=media&token=6be3cbf6-a299-4287-88c6-0baef80eaf05");
+}
 html, body, #root, .content {
   height: 100%;
   min-height: 700px;
