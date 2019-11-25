@@ -3,11 +3,13 @@ import React, { Component } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import moment from "moment";
 import ReactGA, {OutboundLink} from 'react-ga';
+import {UncontrolledTooltip as Tooltip} from 'reactstrap';
+import {CopyToClipboard} from 'react-copy-to-clipboard';
 
 import Project from "../components/Project.jsx";
 import ProjectModal from "../components/ProjectModal.jsx";
 
-import {RESUME_LINK, GITHUB_LINK, LINKEDIN_LINK, MEDIUM_LINK, EMAIL_LINK} from '../config';
+import {RESUME_LINK, GITHUB_LINK, LINKEDIN_LINK, MEDIUM_LINK, EMAIL} from '../config';
 
 export default class Home extends Component {
     constructor(props){
@@ -156,17 +158,18 @@ export default class Home extends Component {
                 },
                 {
                     name: "Email",
-                    link: EMAIL_LINK,
                     analyticsLabel: "email",
                     icon: ["fal", "envelope"],
                 },
             ],
+            copied: false,
         };
 
         this.hover = this.hover.bind(this);
         this.reset = this.reset.bind(this);
         this.setActiveProject = this.setActiveProject.bind(this);
         this.closeModal = this.closeModal.bind(this);
+        this.renderDock = this.renderDock.bind(this);
     }
 
     hover(event){
@@ -188,6 +191,29 @@ export default class Home extends Component {
     }
     componentDidMount(){
         ReactGA.pageview(window.location.pathname + window.location.search);
+    }
+    renderDock(d){
+        if (d.link) {
+            return (
+                <OutboundLink key={d.analyticsLabel} className="link" eventLabel={d.analyticsLabel} to={d.link} target="_blank" rel="noopener noreferrer">
+                    <FontAwesomeIcon icon={d.icon} size="2x" />
+                    <p className="link-desc">{d.name}</p>
+                </OutboundLink>
+            );
+        }
+        return (
+            <div id="mailLink">
+                <Tooltip placement="top" target="mailLink" className="icon-tooltip" offset={"top,10px"}>
+                    {this.state.copied ? "Copied!" : "Copy link"}
+                </Tooltip>
+                <CopyToClipboard className="link" text={EMAIL} onCopy={() => this.setState({copied: true})}>
+                    <span>
+                        <FontAwesomeIcon icon={d.icon} size="2x" />
+                        <p className="link-desc">{d.name}</p>
+                    </span>
+                </CopyToClipboard>
+            </div>
+        );
     }
 
     render(){
@@ -217,12 +243,7 @@ export default class Home extends Component {
 
                         <div className="links-container row d-flex justify-content-center">
                             <div className="links-dock d-flex animated slideInUp">
-                                {this.state.dock.map(d => (
-                                    <OutboundLink key={d.analyticsLabel} className="link" eventLabel={d.analyticsLabel} to={d.link} target="_blank" rel="noopener noreferrer">
-                                        <FontAwesomeIcon icon={d.icon} size="2x" />
-                                        <p className="link-desc">{d.name}</p>
-                                    </OutboundLink>
-                                ))}
+                                {this.state.dock.map(this.renderDock)}
                             </div>
                         </div>
 

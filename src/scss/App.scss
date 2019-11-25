@@ -174,16 +174,14 @@ section{
                 border-radius: 1rem;
                 animation-delay: 0.3s;
             }
-            a{
-                display: block;
-                width: 50px;
-            }
             p.link-desc{
                 font-size: 0.8rem;
                 visibility: hidden;
                 margin: 0px;
             }
             .link{
+                display: block;
+                width: 50px;
                 transition: $transition;
             }
             .link:hover {

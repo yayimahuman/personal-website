@@ -159,16 +159,14 @@ section {
     border-radius: 1rem;
     animation-delay: 0.3s;
   }
-  #landing .links-container a {
-    display: block;
-    width: 50px;
-  }
   #landing .links-container p.link-desc {
     font-size: 0.8rem;
     visibility: hidden;
     margin: 0px;
   }
   #landing .links-container .link {
+    display: block;
+    width: 50px;
     transition: 0.3s ease all;
   }
   #landing .links-container .link:hover {
