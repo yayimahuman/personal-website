@@ -24,7 +24,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "format": "prettier-eslint \"**/*.js\" \"**/*.jsx\" --write && eslint \"**/*.js\" \"**/*.jsx\" --fix",
+    "format": "prettier-eslint $PWD/\"**/*.js\" $PWD/\"**/*.jsx\" --write && eslint \"**/*.js\" \"**/*.jsx\" --fix",
     "lint": "eslint \"**/*.js\" \"**/*.jsx\" --fix",
     "build": "sass src/scss:src/css; react-scripts build",
     "sass": "sass --watch src/scss:src/css",
