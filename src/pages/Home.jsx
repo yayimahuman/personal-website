@@ -103,7 +103,7 @@ export default class Home extends Component {
 					logo:
 						"https://firebasestorage.googleapis.com/v0/b/harry-74f87.appspot.com/o/jouncer-logo.png?alt=media&token=7b962405-b56a-441b-ad95-0adb11eccf3f",
 					description:
-						"I was the lead frontend developer and one of the members of the cofounding team of Jouncer. Our goal is to bring together creators so they could form teams and work on amazing projects. Jouncer is backed by YCombinator and was part of its summer 2019 batch.\n\nOur vision for Jouncer emerged from the desire help motivated, capable individuals to meet other similar people to work on amazing projects together. As the platform evolved, it became a place to share ideas and projects in addition to the teams feature.\n\nJouncer has a React frontend. The backend is Django with a Postgres database.",
+						"I was the lead frontend developer and one of the members of the cofounding team of Jouncer. Our goal is to bring together creators so they could form teams and work on amazing projects. Jouncer is backed by YCombinator and was part of its summer 2019 batch.\n\nOur vision for Jouncer emerged from the desire to connect motivated people who wanted to work on amazing projects together. As the platform evolved, it became a place to share ideas and projects in addition to helping people form teams.\n\nJouncer has a React frontend. The backend is Django with a Postgres database.",
 					link: "https://jouncer.com/",
 					hideDesc: true,
 					textStyles: {color: "#fff"},
@@ -113,7 +113,7 @@ export default class Home extends Component {
 					logo:
 						"https://firebasestorage.googleapis.com/v0/b/harry-74f87.appspot.com/o/tt-logo.svg?alt=media&token=736950ef-7b0a-4d26-9ce7-552a4ae15245",
 					description:
-						"I created Terabyte Tundra, along with its primary sales website BoostUpvotes, with a high school friend of mine. We focus on products that help individuals and small businesses market on Reddit.\n\nTerabyte Tundra is written in PHP with a MySQL database. The sales websites supporting it use various technologies, such as native HTML + CSS + JS and WordPress. The sites have numerous integrations with PayPal and Stripe.",
+						"I created Terabyte Tundra, along with its primary sales website BoostUpvotes, with a high school friend of mine. We provide products that help individuals and small businesses market themselves on Reddit.\n\nTerabyte Tundra is written in PHP with a MySQL database. The sales websites supporting it use native HTML + CSS + JS and WordPress. The sites are also integrated with PayPal and Stripe.",
 					link: "https://terabytetundra.com",
 					textStyles: {color: "#fff"},
 				},
@@ -129,7 +129,7 @@ export default class Home extends Component {
 						fontSize: "1.6rem",
 					},
 					description:
-						"I developed How Long to Read, a site where you can search reading times for over twelve million books. We were featured in the New York Times, LifeHacker, The Independent, Yahoo News, and more. Over a million people from over a hundred countries have used our site since our launch in 2014.\n\nReading is clearly rewarding, but also very time-consuming. We envisioned How Long to Read as tool to help readers find out how long it would take them to read a book they wanted to or needed to read. By putting together pieces of information from different sources, such as word count and audiobook length, we can estimate a reading time for each book we display on our site. Users can read a passage from the book or an equivalent passage which we factor in to create a personalized reading time calculation. With this data, we hope to help readers around the world to allocate their time better.\n\nHow Long to Read is written in Node JS with a React + Redux frontend. The site uses a MySQL database. It was originally written in PHP with an HTML, CSS, and native JavaScript frontend.",
+						"I developed How Long to Read, a site where you can search reading times for over twelve million books. How Long to Read was featured in the New York Times, LifeHacker, The Independent, Yahoo News, and more. Over a million people have visited How Long to Read since its launch in 2014.\n\nBy putting together pieces of information from different sources, such as word count and audiobook length, How Long to Read can estimate a reading time for a book. Users can read a passage to calculate their reading speed. I hope that How Long to Read can help readers manage their reading time just a little bit better.\n\nHow Long to Read is written in Node JS with a React + Redux frontend. The site uses a MySQL database. It was originally written in PHP with an HTML, CSS, and JavaScript frontend.",
 					link: "http://howlongtoread.com",
 				},
 				DataEarth: {
