@@ -113,7 +113,7 @@ export default class Home extends Component {
 					logo:
 						"https://firebasestorage.googleapis.com/v0/b/harry-74f87.appspot.com/o/tt-logo.svg?alt=media&token=736950ef-7b0a-4d26-9ce7-552a4ae15245",
 					description:
-						"I created Terabyte Tundra, along with its primary sales website BoostUpvotes, with a high school friend of mine. We provide products that help individuals and small businesses market themselves on Reddit.\n\nTerabyte Tundra is written in PHP with a MySQL database. The sales websites supporting it use native HTML + CSS + JS and WordPress. The sites are also integrated with PayPal and Stripe.",
+						"I created Terabyte Tundra, along with its primary sales website BoostUpvotes, with a high school friend of mine. We provide products to help individuals and small businesses market themselves on Reddit.\n\nTerabyte Tundra is written in PHP with a MySQL database. The sales websites supporting it use native HTML + CSS + JS and WordPress. The sites are also integrated with PayPal and Stripe.",
 					link: "https://terabytetundra.com",
 					textStyles: {color: "#fff"},
 				},
@@ -129,7 +129,7 @@ export default class Home extends Component {
 						fontSize: "1.6rem",
 					},
 					description:
-						"I developed How Long to Read, a site where you can search reading times for over twelve million books. How Long to Read was featured in the New York Times, LifeHacker, The Independent, Yahoo News, and more. Over a million people have visited How Long to Read since its launch in 2014.\n\nBy putting together pieces of information from different sources, such as word count and audiobook length, How Long to Read can estimate a reading time for a book. Users can read a passage to calculate their reading speed. I hope that How Long to Read can help readers manage their reading time just a little bit better.\n\nHow Long to Read is written in Node JS with a React + Redux frontend. The site uses a MySQL database. It was originally written in PHP with an HTML, CSS, and JavaScript frontend.",
+						"I developed How Long to Read, a site where you can search reading times for over twelve million books. How Long to Read was featured in the New York Times, LifeHacker, The Independent, Yahoo News, and more. Over a million people have visited the site since 2014.\n\nBy putting together pieces of information from different sources, such as word count and audiobook length, How Long to Read can estimate reading times for books. Users can read a passage to calculate their own personalized reading speed to be used when performing reading time calculations. With this info, I hope that I can help readers understand and manage their time just a little bit better.\n\nHow Long to Read is written in Node JS with a React + Redux frontend. The site uses a MySQL database. It was originally written in PHP with an HTML, CSS, and JavaScript frontend.",
 					link: "http://howlongtoread.com",
 				},
 				DataEarth: {
