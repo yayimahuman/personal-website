@@ -142,7 +142,6 @@ section{
             height: $window-length + 4 * $border-width;
             width: $window-length + 4 * $border-width;
             border-radius: 50%;
-            // border: $border-width solid $secondary;
             transition: $transition;
             &:hover{
                 transform: scale(0.99);
@@ -246,7 +245,7 @@ img.project-img{
 
 .modal-content{
     border: none;
-    color: $tertiary;
+    color: $secondary;
     white-space: pre-wrap;
 
     .modal-bg{
@@ -270,7 +269,7 @@ img.project-img{
     a{
         width: 100%;
         text-align: center;
-        color: $tertiary;
+        color: $secondary;
     }
 }
 

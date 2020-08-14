@@ -1,6 +1,6 @@
 {
   "name": "harry",
-  "version": "0.1.0",
+  "version": "1.1.0",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-pro": "^5.4.1",
@@ -19,14 +19,15 @@
     "react-dom": "^16.6.0",
     "react-ga": "^2.7.0",
     "react-router-dom": "^4.3.1",
-    "react-scripts": "^3.2.0",
+    "react-scripts": "^3.4.1",
     "reactstrap": "^6.5.0"
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
+    "format": "prettier-eslint $PWD/\"**/*.js\" $PWD/\"**/*.jsx\" --write && eslint \"**/*.js\" \"**/*.jsx\" --fix",
+    "lint": "eslint \"**/*.js\" \"**/*.jsx\" --fix",
+    "build": "sass src/scss:src/css; react-scripts build",
+    "sass": "sass --watch src/scss:src/css",
     "deploy": "react-scripts build; firebase deploy"
   },
   "eslintConfig": {
@@ -37,5 +38,9 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "prettier-eslint": "^9.0.1",
+    "prettier-eslint-cli": "^5.0.0"
+  }
 }
