@@ -1,7 +1,6 @@
 import React, {Component} from "react";
 // import {Link} from "react-router-dom";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import moment from "moment";
 import ReactGA, {OutboundLink} from "react-ga";
 import {UncontrolledTooltip as Tooltip} from "reactstrap";
 import {CopyToClipboard} from "react-copy-to-clipboard";
@@ -22,7 +21,6 @@ export default class Home extends Component {
 		super(props);
 
 		this.state = {
-			age: moment().diff(moment(936612000000), "years"),
 			interestsOrder: [
 				"coding",
 				"tennis",
@@ -273,7 +271,7 @@ export default class Home extends Component {
 
 						<h1>Hi! I'm Harry</h1>
 						<p className="m-0 desc">
-							{/*I'm a {this.state.age} year old guy from Toronto. */}I study
+							I study
 							software engineering at the University of Waterloo. <br />I love
 							&nbsp;
 							<span className="interest-icon-span">{icons}</span>
