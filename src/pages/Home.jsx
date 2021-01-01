@@ -109,7 +109,7 @@ export default class Home extends Component {
 				"Terabyte Tundra": {
 					backgroundColor: "#334668",
 					logo:
-						"https://firebasestorage.googleapis.com/v0/b/harry-74f87.appspot.com/o/tt-logo.svg?alt=media&token=736950ef-7b0a-4d26-9ce7-552a4ae15245",
+						"https://firebasestorage.googleapis.com/v0/b/harry-74f87.appspot.com/o/tt-logo-old.svg?alt=media&token=51beecf4-0b5d-4056-b454-526ec0b7142c",
 					description:
 						"I created Terabyte Tundra, along with its primary sales website BoostUpvotes, with a high school friend of mine. We provide products to help individuals and small businesses market themselves on Reddit.\n\nTerabyte Tundra is written in PHP with a MySQL database. The sales websites supporting it use native HTML + CSS + JS and WordPress. The sites are also integrated with PayPal and Stripe.",
 					link: "https://terabytetundra.com",
