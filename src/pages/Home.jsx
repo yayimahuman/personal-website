@@ -269,11 +269,10 @@ export default class Home extends Component {
 							</div>
 						</div>
 
-						<h1>Hi! I'm Harry</h1>
+						<h1>Hi! I&apos;m Harry</h1>
 						<p className="m-0 desc">
-							I study
-							software engineering at the University of Waterloo. <br />I love
-							&nbsp;
+							I study software engineering at the University of Waterloo. <br />
+							I love &nbsp;
 							<span className="interest-icon-span">{icons}</span>
 						</p>
 

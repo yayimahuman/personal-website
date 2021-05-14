@@ -65,6 +65,7 @@ export default class ProjectModal extends Component {
 								eventLabel={`${name} outbound`}
 								to={link}
 								target="_blank"
+								rel="noreferrer"
 							>
 								<FontAwesomeIcon icon={["fas", "browser"]} /> Website
 							</OutboundLink>
