@@ -130,16 +130,6 @@ export default class Home extends Component {
 						"I developed How Long to Read, a site where you can search reading times for over twelve million books. How Long to Read was featured in the New York Times, LifeHacker, The Independent, Yahoo News, and more. Over a million people have visited the site since 2014.\n\nBy putting together pieces of information from different sources, such as word count and audiobook length, How Long to Read can estimate reading times for books. Users can read a passage to calculate their own personalized reading speed to be used when performing reading time calculations. With this info, I hope that I can help readers understand and manage their time just a little bit better.\n\nHow Long to Read is written in Node JS with a React + Redux frontend. The site uses a MySQL database. It was originally written in PHP with an HTML, CSS, and JavaScript frontend.",
 					link: "http://howlongtoread.com",
 				},
-				DataEarth: {
-					backgroundColor: "#23a8e9",
-					logo:
-						"https://firebasestorage.googleapis.com/v0/b/harry-74f87.appspot.com/o/de-logo.png?alt=media&token=43d4a8d6-43cb-4c22-999c-8ace3f23580c",
-					description:
-						"I was one of the two people who developed DataEarth under contract. DataEarth helps researchers visualize biological relationships within an ecosystem.",
-					hideDesc: true,
-					link: "https://dataearth.com/demo.php",
-					textStyles: {color: "#fff"},
-				},
 			},
 			activeProject: undefined,
 			dock: [
