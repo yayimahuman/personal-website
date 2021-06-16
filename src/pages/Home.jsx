@@ -93,7 +93,6 @@ export default class Home extends Component {
 				"Jouncer",
 				"How Long to Read",
 				"Terabyte Tundra",
-				"DataEarth",
 			],
 			projects: {
 				Jouncer: {
