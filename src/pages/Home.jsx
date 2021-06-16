@@ -89,11 +89,7 @@ export default class Home extends Component {
 				},
 			},
 			activeInterest: "nothing to see here",
-			projectsOrder: [
-				"Jouncer",
-				"How Long to Read",
-				"Terabyte Tundra",
-			],
+			projectsOrder: ["Jouncer", "How Long to Read", "Terabyte Tundra"],
 			projects: {
 				Jouncer: {
 					backgroundColor: "#2a2c3f",
