@@ -12,6 +12,7 @@ import {
 	RESUME_LINK,
 	GITHUB_LINK,
 	LINKEDIN_LINK,
+	TWITTER_LINK,
 	MEDIUM_LINK,
 	EMAIL,
 } from "../config";
@@ -145,6 +146,12 @@ export default class Home extends Component {
 					link: LINKEDIN_LINK,
 					analyticsLabel: "linkedin",
 					icon: ["fab", "linkedin"],
+				},
+				{
+					name: "Twitter",
+					link: TWITTER_LINK,
+					analyticsLabel: "twitter",
+					icon: ["fab", "twitter"],
 				},
 				{
 					name: "Medium",

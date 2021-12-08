@@ -26,6 +26,7 @@ import {
 	faGithub,
 	faLinkedin,
 	faMedium,
+	faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
 
 import Home from "./pages/Home.jsx";
@@ -51,6 +52,7 @@ library.add(
 	faPodium,
 	faTennisBall,
 	faTimes,
+	faTwitter,
 	faUsdCircle,
 	faUtensils,
 );

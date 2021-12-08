@@ -4,6 +4,8 @@ export const GITHUB_LINK = "https://github.com/yayimahuman";
 
 export const LINKEDIN_LINK = "https://www.linkedin.com/in/yayimahuman/";
 
+export const TWITTER_LINK = "https://twitter.com/yayimahuman";
+
 export const MEDIUM_LINK = "https://medium.com/@yayimahuman";
 
 export const EMAIL = "me@harry.to";
