@@ -19,14 +19,14 @@
     "react-ga": "^2.7.0",
     "react-router-dom": "^4.3.1",
     "react-scripts": "^4.0.3",
-    "reactstrap": "^6.5.0"
+    "reactstrap": "^6.5.0",
+    "sass": "^1.45.1"
   },
   "scripts": {
     "start": "react-scripts start",
     "format": "prettier-eslint $PWD/\"**/*.js\" $PWD/\"**/*.jsx\" --write && eslint \"**/*.js\" \"**/*.jsx\" --fix",
     "lint": "eslint \"**/*.js\" \"**/*.jsx\" --fix",
     "build": "sass src/scss:src/css; react-scripts build",
-    "sass": "sass --watch src/scss:src/css",
     "deploy": "react-scripts build; firebase deploy"
   },
   "eslintConfig": {

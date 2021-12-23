@@ -30,7 +30,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 import Home from "./pages/Home.jsx";
-import "./css/App.css";
+import "./scss/App.scss";
 
 ReactGA.initialize("UA-149491515-1");
 
