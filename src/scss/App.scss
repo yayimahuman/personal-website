@@ -1,4 +1,7 @@
 @import "vars";
+@media (prefers-color-scheme: dark) {
+    @import "vars_dark";
+}
 
 @font-face {
     font-family: "Averta";
@@ -168,7 +171,7 @@ section{
             padding-bottom: 10px;
 
             .links-dock{
-                background: #f5f5f5;
+                background: $bg-dock;
                 padding: 20px 30px 0px;
                 border-radius: 1rem;
                 animation-delay: 0.3s;
@@ -244,6 +247,7 @@ img.project-img{
 }
 
 .modal-content{
+    background: $bg-primary-light;
     border: none;
     color: $secondary;
     white-space: pre-wrap;
@@ -278,13 +282,60 @@ img.project-img{
     section{
         padding: 100px;
     }
-
     .modal-content{
         .modal-bg{
             height: 400px;
         }
         .modal-logo{
             width: 70%;
+        }
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    @import "vars_dark";
+    body {
+        background: $bg-primary;
+        color: $primary;
+    }
+    
+    h1, h2, h3, h4, h5, h6{
+        color: $primary;
+    }
+    
+    a{
+        color: $primary;
+        &:hover, &:focus, &:active{
+            color: $primary;
+        }
+    }
+    #landing{
+        #window-inner-container{
+            border-color: $primary;
+        }
+        @media (min-width: $sm){
+            .links-container{
+                .links-dock{
+                    background: $bg-dock;
+                }
+            }
+            #window{
+                border-color: $bg-primary;
+            }
+            #window-inner-container{
+                border-color: $primary;
+            }
+        }
+    }
+
+    .modal-content{
+        background: $bg-primary-light;
+        color: $secondary;
+        .modal-bg{
+            background-color: $bg-primary;
+        }
+        a{
+            color: $secondary;
         }
     }
 }

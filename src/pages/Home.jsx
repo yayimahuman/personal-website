@@ -39,7 +39,7 @@ export default class Home extends Component {
 			interests: {
 				coding: {
 					icon: ["fal", "code"],
-					color: "#313340",
+					color: "#4d5063",
 				},
 				tennis: {
 					icon: ["fal", "tennis-ball"],
