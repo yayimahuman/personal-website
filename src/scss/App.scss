@@ -319,6 +319,9 @@ img.project-img {
     }
   }
   #landing {
+    #window {
+      border-color: $bg-primary;
+    }
     #window-inner-container {
       border-color: $primary;
     }
