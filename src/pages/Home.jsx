@@ -219,7 +219,7 @@ export default class Home extends Component {
 					className="icon-tooltip"
 					offset={"top,10px"}
 				>
-					{this.state.copied ? "Copied!" : "Copy link"}
+					{this.state.copied ? "Copied!" : "Copy email"}
 				</Tooltip>
 				<CopyToClipboard
 					className="link"
@@ -264,7 +264,8 @@ export default class Home extends Component {
 						<h1>Hi! I&apos;m Harry</h1>
 						<p className="m-0 desc">
 							I study software engineering at the University of Waterloo. <br />
-							I love &nbsp;
+							Feel free to email me if you want me to edit your AIF or do a
+							coding interview. <br />I love &nbsp;
 							<span className="interest-icon-span">{icons}</span>
 						</p>
 
