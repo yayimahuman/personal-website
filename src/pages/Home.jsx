@@ -1,5 +1,4 @@
 import React, {Component} from "react";
-// import {Link} from "react-router-dom";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import ReactGA, {OutboundLink} from "react-ga";
 import {UncontrolledTooltip as Tooltip} from "reactstrap";

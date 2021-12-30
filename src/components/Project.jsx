@@ -1,7 +1,4 @@
 import React, {Component} from "react";
-// import {Link} from "react-router-dom";
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-// import config from '../config';
 
 export default class Project extends Component {
 	constructor(props) {
@@ -15,14 +12,7 @@ export default class Project extends Component {
 	}
 
 	render() {
-		const {
-			backgroundColor,
-			img,
-			name,
-			logo,
-			logoStyles,
-			textStyles,
-		} = this.props;
+		const {backgroundColor, name, logo, logoStyles, textStyles} = this.props;
 		return (
 			<div className="project project-container">
 				<div

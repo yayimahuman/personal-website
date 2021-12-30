@@ -26,7 +26,7 @@
     "start": "react-scripts start",
     "format": "prettier-eslint $PWD/\"**/*.js\" $PWD/\"**/*.jsx\" --write && eslint \"**/*.js\" \"**/*.jsx\" --fix",
     "lint": "eslint \"**/*.js\" \"**/*.jsx\" --fix",
-    "build": "sass src/scss:src/css; react-scripts build",
+    "build": "react-scripts build",
     "deploy": "react-scripts build; firebase deploy"
   },
   "eslintConfig": {
