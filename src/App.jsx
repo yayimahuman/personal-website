@@ -27,6 +27,7 @@ import {
 	faLinkedin,
 	faMedium,
 	faTwitter,
+	faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
 
 import Home from "./pages/Home.jsx";
@@ -55,6 +56,7 @@ library.add(
 	faTwitter,
 	faUsdCircle,
 	faUtensils,
+	faYoutube,
 );
 
 class App extends Component {

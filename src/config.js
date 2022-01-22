@@ -2,6 +2,8 @@ export const RESUME_LINK =	"https://drive.google.com/file/d/11gX07RsTaOwRqYRF6fe
 
 export const GITHUB_LINK = "https://github.com/yayimahuman";
 
+export const YOUTUBE_LINK =	"https://www.youtube.com/channel/UC-dWBwsKPtKAQmh3ONXkCLg";
+
 export const LINKEDIN_LINK = "https://www.linkedin.com/in/yayimahuman/";
 
 export const TWITTER_LINK = "https://twitter.com/yayimahuman";

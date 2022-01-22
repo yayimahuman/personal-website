@@ -13,6 +13,7 @@ import {
 	LINKEDIN_LINK,
 	TWITTER_LINK,
 	MEDIUM_LINK,
+	YOUTUBE_LINK,
 	EMAIL,
 } from "../config";
 
@@ -135,10 +136,10 @@ export default class Home extends Component {
 					icon: ["fal", "file-alt"],
 				},
 				{
-					name: "GitHub",
-					link: GITHUB_LINK,
-					analyticsLabel: "github",
-					icon: ["fab", "github"],
+					name: "YouTube",
+					link: YOUTUBE_LINK,
+					analyticsLabel: "youtube",
+					icon: ["fab", "youtube"],
 				},
 				{
 					name: "LinkedIn",
@@ -146,6 +147,13 @@ export default class Home extends Component {
 					analyticsLabel: "linkedin",
 					icon: ["fab", "linkedin"],
 				},
+				{
+					name: "GitHub",
+					link: GITHUB_LINK,
+					analyticsLabel: "github",
+					icon: ["fab", "github"],
+				},
+
 				{
 					name: "Twitter",
 					link: TWITTER_LINK,
@@ -263,8 +271,7 @@ export default class Home extends Component {
 						<h1>Hi! I&apos;m Harry</h1>
 						<p className="m-0 desc">
 							I study software engineering at the University of Waterloo. <br />
-							Feel free to email me if you want me to edit your AIF or do a
-							coding interview. <br />I love &nbsp;
+							I love &nbsp;
 							<span className="interest-icon-span">{icons}</span>
 						</p>
 
