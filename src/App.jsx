@@ -19,6 +19,7 @@ import {
 	faTennisBall,
 	faUsdCircle,
 	faUtensils,
+	faHeadSideBrain,
 } from "@fortawesome/pro-light-svg-icons";
 import {faTimes} from "@fortawesome/pro-regular-svg-icons";
 import {faBrowser} from "@fortawesome/pro-solid-svg-icons";
@@ -57,6 +58,7 @@ library.add(
 	faUsdCircle,
 	faUtensils,
 	faYoutube,
+	faHeadSideBrain,
 );
 
 class App extends Component {

@@ -24,16 +24,16 @@ export default class Home extends Component {
 		this.state = {
 			interestsOrder: [
 				"coding",
-				"tennis",
+				"meditation",
 				"food",
-				"economics",
+				"travelling",
+				"finance",
 				"reading",
 				"skiing",
+				"tennis",
 				"tea",
 				"biking",
 				"politics",
-				"finance",
-				"travelling",
 				"taylor swift",
 			],
 			interests: {
@@ -84,6 +84,10 @@ export default class Home extends Component {
 				"taylor swift": {
 					icon: ["fal", "female"],
 					color: "pink",
+				},
+				meditation: {
+					icon: ["fal", "head-side-brain"],
+					color: "#e8774b",
 				},
 				"nothing to see here": {
 					color: "white",
@@ -270,7 +274,7 @@ export default class Home extends Component {
 
 						<h1>Hi! I&apos;m Harry</h1>
 						<p className="m-0 desc">
-							I study software engineering at the University of Waterloo. <br />
+							I work as a software engineer. <br />
 							I love &nbsp;
 							<span className="interest-icon-span">{icons}</span>
 						</p>
