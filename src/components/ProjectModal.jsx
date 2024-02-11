@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import {Modal, ModalBody, ModalFooter} from "reactstrap";
+import {Modal} from "react-bootstrap";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {OutboundLink} from "react-ga";
 
@@ -23,11 +23,11 @@ export default class ProjectModal extends Component {
 		return (
 			<div>
 				<Modal
-					isOpen={!!name}
-					toggle={this.props.close}
-					className={"modal-dialog-centered"}
+					show={!!name}
+					onHide={this.props.close}
+					centered
 				>
-					<ModalBody>
+					<Modal.Body>
 						<div
 							className="d-flex justify-content-center align-items-center modal-bg flex-column"
 							style={modalBgStyles}
@@ -57,8 +57,8 @@ export default class ProjectModal extends Component {
 							/>
 						</div>
 						<p>{description}</p>
-					</ModalBody>
-					<ModalFooter>
+					</Modal.Body>
+					<Modal.Footer>
 						{name ? (
 							<OutboundLink
 								className="link"
@@ -70,7 +70,7 @@ export default class ProjectModal extends Component {
 								<FontAwesomeIcon icon={["fas", "browser"]} /> Website
 							</OutboundLink>
 						) : null}
-					</ModalFooter>
+					</Modal.Footer>
 				</Modal>
 			</div>
 		);

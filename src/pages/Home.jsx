@@ -1,7 +1,8 @@
 import React, {Component} from "react";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import ReactGA, {OutboundLink} from "react-ga";
-import {UncontrolledTooltip as Tooltip} from "reactstrap";
+import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
+import Tooltip from 'react-bootstrap/Tooltip';
 import {CopyToClipboard} from "react-copy-to-clipboard";
 
 import Project from "../components/Project.jsx";
@@ -206,6 +207,12 @@ export default class Home extends Component {
 	componentDidMount() {
 		ReactGA.pageview(window.location.pathname + window.location.search);
 	}
+	renderTooltip = (props) => (
+		<Tooltip id="button-tooltip" target="mailLink"
+		className="icon-tooltip" {...props}>
+		  {this.state.copied ? "Copied!" : "Copy email"}
+		</Tooltip>
+	);
 	renderDock(d) {
 		if (d.link) {
 			return (
@@ -224,23 +231,21 @@ export default class Home extends Component {
 		}
 		return (
 			<div id="mailLink">
-				<Tooltip
+				<OverlayTrigger
 					placement="top"
-					target="mailLink"
-					className="icon-tooltip"
+					overlay={this.renderTooltip}
 				>
-					{this.state.copied ? "Copied!" : "Copy email"}
-				</Tooltip>
-				<CopyToClipboard
-					className="link"
-					text={EMAIL}
-					onCopy={() => this.setState({copied: true})}
-				>
-					<span>
-						<FontAwesomeIcon icon={d.icon} size="2x" />
-						<p className="link-desc">{d.name}</p>
-					</span>
-				</CopyToClipboard>
+					<CopyToClipboard
+						className="link"
+						text={EMAIL}
+						onCopy={() => this.setState({copied: true})}
+					>
+						<span>
+							<FontAwesomeIcon icon={d.icon} size="2x" />
+							<p className="link-desc">{d.name}</p>
+						</span>
+					</CopyToClipboard>
+				</OverlayTrigger>
 			</div>
 		);
 	}
