@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
+import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import ReactGA from "react-ga";
 
 // https://www.npmjs.com/package/@fortawesome/react-fontawesome
@@ -65,10 +65,10 @@ class App extends Component {
 	render() {
 		return (
 			<Router id="App">
-				<Switch>
-					<Route exact path="/home" component={Home} />
-					<Route exact path="/" component={Home} />
-				</Switch>
+				<Routes>
+					<Route path="/home" element={<Home />} />
+					<Route path="/" element={<Home />} />
+				</Routes>
 			</Router>
 		);
 	}

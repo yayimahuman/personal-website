@@ -228,7 +228,6 @@ export default class Home extends Component {
 					placement="top"
 					target="mailLink"
 					className="icon-tooltip"
-					offset={"top,10px"}
 				>
 					{this.state.copied ? "Copied!" : "Copy email"}
 				</Tooltip>
