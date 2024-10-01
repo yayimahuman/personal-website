@@ -1,4 +1,4 @@
-import React, {Component} from "react";
+import {Component} from "react";
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import ReactGA from "react-ga";
 
@@ -32,6 +32,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 import Home from "./pages/Home.jsx";
+import Transit from "./pages/Transit.jsx";
 import "./scss/App.scss";
 
 ReactGA.initialize("UA-149491515-1");
@@ -67,6 +68,8 @@ class App extends Component {
 			<Router id="App">
 				<Routes>
 					<Route path="/home" element={<Home />} />
+					<Route exact path="/path/:station" element={<Transit />} />
+					<Route path="/path" element={<Transit />} />
 					<Route path="/" element={<Home />} />
 				</Routes>
 			</Router>
