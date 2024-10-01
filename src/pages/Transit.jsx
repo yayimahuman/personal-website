@@ -28,8 +28,28 @@ const StyledCircle = styled.span`
 	height: 40px;
 	border-radius: 50%;
 	margin-right: 10px;
-	background-color: ${(props) => props.color};
 	vertical-align: middle;
+	position: relative;
+	overflow: hidden;
+
+	&::before,
+	&::after {
+		content: '';
+		position: absolute;
+		top: 0;
+		width: 50%;
+		height: 100%;
+	}
+
+	&::before {
+		left: 0;
+		background-color: ${(props) => props.colors[0]};
+	}
+
+	&::after {
+		right: 0;
+		background-color: ${(props) => props.colors[1] || props.colors[0]};
+	}
 `;
 
 const StyledStation = styled.span`
@@ -168,7 +188,7 @@ const Transit = () => {
 			{trains.map((train, index) => (
 				<StyledRow key={index} isClose={calculateCountdown(train.projectedArrival).isClose}>
 					<div>
-						<StyledCircle color={train.lineColors[0]} />
+						<StyledCircle colors={train.lineColors} />
 						<StyledStation>{train.headsign}</StyledStation>
 					</div>
 					{(() => {
