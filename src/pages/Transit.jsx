@@ -186,7 +186,7 @@ const Transit = () => {
 					})}
 				</StyledCurrentTime>
 				<StyledLastUpdate>
-					Depatures for {formattedStation}. Last updated:{" "}
+					Departures for {formattedStation}. Last updated:{" "}
 					{lastUpdate.toLocaleTimeString([], {
 						hour: "2-digit",
 						minute: "2-digit",
