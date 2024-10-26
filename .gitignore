@@ -23,3 +23,4 @@ yarn-error.log*
 .npmrc
 
 ui-debug.log
+firebase-debug.log

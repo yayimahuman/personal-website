@@ -143,9 +143,9 @@ const Transit = () => {
 	useEffect(() => {
 		const fetchData = async () => {
 			try {
-				//const response = await fetch('https://pathapi-7absdapzja-uc.a.run.app');
-				//const data = await response.json();
-				const data = require('./ridepath.json');
+				const response = await fetch('https://pathapi-7absdapzja-uc.a.run.app');
+				const data = await response.json();
+				//const data = require('./ridepath.json');
 
 				const stationData = data.results.find(
 					(s) => s.consideredStation === getStationCode(station)
@@ -189,7 +189,7 @@ const Transit = () => {
 
 		const timeInterval = setInterval(() => {
 			setCurrentTime(new Date());
-		}, 300);
+		}, 100);
 
 		return () => {
 			clearTimeout(initialFetchTimeout);
