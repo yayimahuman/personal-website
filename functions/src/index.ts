@@ -2,7 +2,6 @@ import {onRequest} from "firebase-functions/v2/https";
 import * as logger from "firebase-functions/logger";
 
 export const pathapi = onRequest(
-
   {cors: [/harrytong\.com$/]},
   async (request, response) => {
     try {

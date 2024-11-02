@@ -22,11 +22,7 @@ export default class ProjectModal extends Component {
 
 		return (
 			<div>
-				<Modal
-					show={!!name}
-					onHide={this.props.close}
-					centered
-				>
+				<Modal show={!!name} onHide={this.props.close} centered>
 					<Modal.Body>
 						<div
 							className="d-flex justify-content-center align-items-center modal-bg flex-column"

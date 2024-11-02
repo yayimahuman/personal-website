@@ -1,8 +1,8 @@
 import React, {Component} from "react";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import ReactGA, {OutboundLink} from "react-ga";
-import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
-import Tooltip from 'react-bootstrap/Tooltip';
+import OverlayTrigger from "react-bootstrap/OverlayTrigger";
+import Tooltip from "react-bootstrap/Tooltip";
 import {CopyToClipboard} from "react-copy-to-clipboard";
 
 import Project from "../components/Project.jsx";
@@ -99,8 +99,7 @@ export default class Home extends Component {
 			projects: {
 				Jouncer: {
 					backgroundColor: "#2a2c3f",
-					logo:
-						"https://firebasestorage.googleapis.com/v0/b/harry-74f87.appspot.com/o/jouncer-logo.png?alt=media&token=7b962405-b56a-441b-ad95-0adb11eccf3f",
+					logo: "https://firebasestorage.googleapis.com/v0/b/harry-74f87.appspot.com/o/jouncer-logo.png?alt=media&token=7b962405-b56a-441b-ad95-0adb11eccf3f",
 					description:
 						"I was the lead frontend developer and one of the members of the cofounding team of Jouncer. Our goal is to bring together creators so they could form teams and work on amazing projects. Jouncer is backed by YCombinator and was part of its summer 2019 batch.\n\nOur vision for Jouncer emerged from the desire to connect motivated people who wanted to work on amazing projects together. As the platform evolved, it became a place to share ideas and projects in addition to helping people form teams.\n\nJouncer has a React frontend. The backend is Django with a Postgres database.",
 					link: "https://jouncer.com/",
@@ -109,8 +108,7 @@ export default class Home extends Component {
 				},
 				"Terabyte Tundra": {
 					backgroundColor: "#334668",
-					logo:
-						"https://firebasestorage.googleapis.com/v0/b/harry-74f87.appspot.com/o/tt-logo-old.svg?alt=media&token=51beecf4-0b5d-4056-b454-526ec0b7142c",
+					logo: "https://firebasestorage.googleapis.com/v0/b/harry-74f87.appspot.com/o/tt-logo-old.svg?alt=media&token=51beecf4-0b5d-4056-b454-526ec0b7142c",
 					description:
 						"I created Terabyte Tundra, along with its primary sales website BoostUpvotes, with a high school friend of mine. We provide products to help individuals and small businesses market themselves on Reddit.\n\nTerabyte Tundra is written in PHP with a MySQL database. The sales websites supporting it use native HTML + CSS + JS and WordPress. The sites are also integrated with PayPal and Stripe.",
 					link: "https://terabytetundra.com",
@@ -118,8 +116,7 @@ export default class Home extends Component {
 				},
 				"How Long to Read": {
 					backgroundColor: "#c34b30",
-					logo:
-						"https://firebasestorage.googleapis.com/v0/b/harry-74f87.appspot.com/o/hltr-logo.svg?alt=media&token=042febef-5378-4f73-a511-a9930e408ddd",
+					logo: "https://firebasestorage.googleapis.com/v0/b/harry-74f87.appspot.com/o/hltr-logo.svg?alt=media&token=042febef-5378-4f73-a511-a9930e408ddd",
 					logoStyles: {width: "40%"},
 					textStyles: {
 						color: "#f5e2bf",
@@ -188,7 +185,8 @@ export default class Home extends Component {
 	}
 
 	hover(event) {
-		let interest =			event.target.id || event.target.parentNode.id || "nothing to see here";
+		let interest =
+			event.target.id || event.target.parentNode.id || "nothing to see here";
 		this.setState({activeInterest: interest});
 	}
 	reset() {
@@ -208,9 +206,13 @@ export default class Home extends Component {
 		ReactGA.pageview(window.location.pathname + window.location.search);
 	}
 	renderTooltip = (props) => (
-		<Tooltip id="button-tooltip" target="mailLink"
-		className="icon-tooltip" {...props}>
-		  {this.state.copied ? "Copied!" : "Copy email"}
+		<Tooltip
+			id="button-tooltip"
+			target="mailLink"
+			className="icon-tooltip"
+			{...props}
+		>
+			{this.state.copied ? "Copied!" : "Copy email"}
 		</Tooltip>
 	);
 	renderDock(d) {
@@ -231,10 +233,7 @@ export default class Home extends Component {
 		}
 		return (
 			<div id="mailLink">
-				<OverlayTrigger
-					placement="top"
-					overlay={this.renderTooltip}
-				>
+				<OverlayTrigger placement="top" overlay={this.renderTooltip}>
 					<CopyToClipboard
 						className="link"
 						text={EMAIL}
@@ -251,7 +250,7 @@ export default class Home extends Component {
 	}
 
 	render() {
-		let icons = this.state.interestsOrder.map(name => {
+		let icons = this.state.interestsOrder.map((name) => {
 			let i = this.state.interests[name];
 			return (
 				<span key={name}>
@@ -278,15 +277,14 @@ export default class Home extends Component {
 
 						<h1>Hi! I&apos;m Harry</h1>
 						<p className="m-0 desc">
-							I work as a software engineer. <br />
-							I love &nbsp;
+							I work as a software engineer. <br />I love &nbsp;
 							<span className="interest-icon-span">{icons}</span>
 						</p>
 
 						<p
 							className={
-								"active-interest"
-								+ (this.state.activeInterest === "nothing to see here"
+								"active-interest" +
+								(this.state.activeInterest === "nothing to see here"
 									? " invisible"
 									: "")
 							}
@@ -307,7 +305,7 @@ export default class Home extends Component {
 
 				<section id="projects">
 					<div className="row justify-content-center">
-						{this.state.projectsOrder.map(name => (
+						{this.state.projectsOrder.map((name) => (
 							<Project
 								{...this.state.projects[name]}
 								key={name}
