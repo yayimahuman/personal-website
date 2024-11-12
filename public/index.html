@@ -48,13 +48,13 @@
     <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase.js"></script>
     <script>
       // Initialize Firebase
-      var config = {
-        apiKey: "AIzaSyBPa001EVOIHztwl6jkNrr5iTJcKQlzdRQ",
-        authDomain: "harry-74f87.firebaseapp.com",
-        databaseURL: "https://harry-74f87.firebaseio.com",
-        projectId: "harry-74f87",
-        storageBucket: "harry-74f87.appspot.com",
-        messagingSenderId: "91729057424"
+      const config = {
+        apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+        authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
+        databaseURL: process.env.REACT_APP_FIREBASE_DATABASE_URL,
+        projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
+        storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+        messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID
       };
       firebase.initializeApp(config);
     </script>
