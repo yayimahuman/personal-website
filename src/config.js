@@ -10,6 +10,8 @@ export const LINKEDIN_LINK = "https://www.linkedin.com/in/yayimahuman/";
 
 export const TWITTER_LINK = "https://twitter.com/yayimahuman";
 
+export const SUBSTACK_LINK = "https://yayimahuman.substack.com";
+
 export const MEDIUM_LINK = "https://medium.com/@yayimahuman";
 
 export const EMAIL = "me@harry.to";

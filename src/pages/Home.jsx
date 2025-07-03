@@ -7,6 +7,7 @@ import {CopyToClipboard} from "react-copy-to-clipboard";
 
 import Project from "../components/Project.jsx";
 import ProjectModal from "../components/ProjectModal.jsx";
+import SubstackIcon from "../components/SubstackIcon.jsx";
 
 import {
 	RESUME_LINK,
@@ -14,6 +15,7 @@ import {
 	LINKEDIN_LINK,
 	TWITTER_LINK,
 	MEDIUM_LINK,
+	SUBSTACK_LINK,
 	YOUTUBE_LINK,
 	EMAIL,
 } from "../config";
@@ -135,43 +137,48 @@ export default class Home extends Component {
 					name: "Résumé",
 					link: RESUME_LINK,
 					analyticsLabel: "resume",
-					icon: ["fal", "file-alt"],
+					icon: {kind: "fontawesome", data: ["fal", "file-alt"]},
 				},
 				{
 					name: "YouTube",
 					link: YOUTUBE_LINK,
 					analyticsLabel: "youtube",
-					icon: ["fab", "youtube"],
+					icon: {kind: "fontawesome", data: ["fab", "youtube"]},
 				},
 				{
 					name: "LinkedIn",
 					link: LINKEDIN_LINK,
 					analyticsLabel: "linkedin",
-					icon: ["fab", "linkedin"],
+					icon: {kind: "fontawesome", data: ["fab", "linkedin"]},
 				},
 				{
 					name: "GitHub",
 					link: GITHUB_LINK,
 					analyticsLabel: "github",
-					icon: ["fab", "github"],
+					icon: {kind: "fontawesome", data: ["fab", "github"]},
 				},
-
 				{
 					name: "Twitter",
 					link: TWITTER_LINK,
 					analyticsLabel: "twitter",
-					icon: ["fab", "twitter"],
+					icon: {kind: "fontawesome", data: ["fab", "twitter"]},
+				},
+				{
+					name: "Substack",
+					link: SUBSTACK_LINK,
+					analyticsLabel: "substack",
+					icon: {kind: "substack", data: null},
 				},
 				{
 					name: "Medium",
 					link: MEDIUM_LINK,
 					analyticsLabel: "medium",
-					icon: ["fab", "medium"],
+					icon: {kind: "fontawesome", data: ["fab", "medium"]},
 				},
 				{
 					name: "Email",
 					analyticsLabel: "email",
-					icon: ["fal", "envelope"],
+					icon: {kind: "fontawesome", data: ["fal", "envelope"]},
 				},
 			],
 			copied: false,
@@ -226,7 +233,11 @@ export default class Home extends Component {
 					target="_blank"
 					rel="noopener noreferrer"
 				>
-					<FontAwesomeIcon icon={d.icon} size="2x" />
+					{d.icon.kind === "fontawesome" ? (
+						<FontAwesomeIcon icon={d.icon.data} size="2x" />
+					) : d.icon.kind === "substack" ? (
+						<SubstackIcon size="2x" />
+					) : null}
 					<p className="link-desc">{d.name}</p>
 				</OutboundLink>
 			);
@@ -240,7 +251,7 @@ export default class Home extends Component {
 						onCopy={() => this.setState({copied: true})}
 					>
 						<span>
-							<FontAwesomeIcon icon={d.icon} size="2x" />
+							<FontAwesomeIcon icon={d.icon.data} size="2x" />
 							<p className="link-desc">{d.name}</p>
 						</span>
 					</CopyToClipboard>
