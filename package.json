@@ -40,6 +40,14 @@
     "not op_mini all"
   ],
   "devDependencies": {
+    "@types/caseless": "^0.12.5",
+    "@types/cors": "^2.8.19",
+    "@types/jsonwebtoken": "^9.0.10",
+    "@types/lodash": "^4.17.20",
+    "@types/long": "^5.0.0",
+    "@types/ms": "^2.1.0",
+    "@types/request": "^2.48.13",
+    "@types/tough-cookie": "^4.0.5",
     "prettier-eslint": "^16.3.0",
     "prettier-eslint-cli": "^8.0.1"
   }
