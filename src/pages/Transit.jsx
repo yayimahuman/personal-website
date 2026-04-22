@@ -59,7 +59,7 @@ const StyledStation = styled.span`
 
 const StyledTime = styled.span`
 	padding: 2px 6px;
-	
+
 	span {
 		font-size: 30px;
 	}
@@ -268,7 +268,9 @@ const Transit = () => {
 						);
 						return (
 							<StyledTime>
-								{minutes}<span> min</span> {seconds}<span> s</span>
+								{minutes}
+								<span> min</span> {seconds}
+								<span> s</span>
 							</StyledTime>
 						);
 					})()}

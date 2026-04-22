@@ -1,5 +1,5 @@
 export const RESUME_LINK =
-	"https://drive.google.com/file/d/1ku_92rnpJQnqSjFKR35GEJwwARW0OQA0/view?usp=share_link";
+	"https://drive.google.com/file/d/1DOb62__z-iPjkh93_U87YZsLJPS3tsmj/view?usp=sharing";
 
 export const GITHUB_LINK = "https://github.com/yayimahuman";
 
