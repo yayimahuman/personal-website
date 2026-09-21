@@ -20,4 +20,9 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 .DS_Store
-.npmrc
+
+ui-debug.log
+.wrangler
+.dev.vars
+# resume is hosted outside git (withdrawable); never commit it
+*.pdf

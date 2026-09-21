@@ -3,9 +3,9 @@ import {ReactComponent as SubstackLogo} from "./SubstackLogo.svg";
 
 const SubstackIcon = ({size = "2x", className = ""}) => {
 	const sizeClass = size === "2x" ? "fa-2x" : `fa-${size}`;
-	
+
 	return (
-		<SubstackLogo 
+		<SubstackLogo
 			className={`svg-inline--fa fa-substack ${sizeClass} ${className}`}
 			role="img"
 			aria-hidden="true"
@@ -14,4 +14,4 @@ const SubstackIcon = ({size = "2x", className = ""}) => {
 	);
 };
 
-export default SubstackIcon; 
+export default SubstackIcon;
